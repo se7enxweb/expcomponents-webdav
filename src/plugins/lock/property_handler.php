@@ -264,7 +264,8 @@ class ezcWebdavLockPropertyHandler
         }
         else if ( is_scalar( $elementValue ) )
         {
-            $propertyElement->nodeValue = $elementValue;
+            // A text node escapes the value (an assignment to nodeValue reads "&" as an entity reference)
+            $propertyElement->appendChild( $propertyElement->ownerDocument->createTextNode( (string) $elementValue ) );
         }
 
         return $propertyElement;
@@ -338,7 +339,7 @@ class ezcWebdavLockPropertyHandler
                     );
                 }
                 
-                $ownerElement->nodeValue = $activeLock->owner->content;
+                $ownerElement->appendChild( $dom->createTextNode( (string) $activeLock->owner->content ) );
             }
 
             $activeLockElement->appendChild(

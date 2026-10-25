@@ -168,7 +168,9 @@ class ezcWebdavLockPropFindRequestResponseHandler extends ezcWebdavLockRequestRe
                 }
             }
 
-            if ( count( $status404Storage ) === 0 )
+            // No 404 storage at all (every requested property was found) leaves nothing to clean up. count() of
+            // null was 0 before PHP 7.2 and is a TypeError since PHP 8.0.
+            if ( $status404Storage !== null && count( $status404Storage ) === 0 )
             {
                 $responses = $propFindRes->responses;
                 foreach ( $responses as $id => $propStatRes )

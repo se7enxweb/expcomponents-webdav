@@ -1282,7 +1282,7 @@ class ezcWebdavTransport
             {
                 $responseElement->appendChild(
                     ezcWebdavServer::getInstance()->xmlTool->createDomElement( $dom, 'responsedescription' )
-                )->nodeValue = $response->responseDescription;
+                )->appendChild( $dom->createTextNode( (string) $response->responseDescription ) );
             }
             $res = new ezcWebdavXmlDisplayInformation( $response, $dom );
         }

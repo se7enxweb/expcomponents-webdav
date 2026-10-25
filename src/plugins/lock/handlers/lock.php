@@ -98,10 +98,15 @@ class ezcWebdavLockLockRequestResponseHandler extends ezcWebdavLockRequestRespon
      * returned. If the lock was acquired successfully, an instance of {@link
      * ezcWebdavLockResponse} is returned.
      * 
+     * $lockNullCreated is true when the call comes from {@link
+     * createLockNullResource()}, after the resource was created: a resource
+     * that still does not exist then is an error, never a second creation.
+     *
      * @param ezcWebdavLockRequest $request 
+     * @param bool $lockNullCreated
      * @return ezcWebdavResponse
      */
-    protected function acquireLock( ezcWebdavLockRequest $request )
+    protected function acquireLock( ezcWebdavLockRequest $request, $lockNullCreated = false )
     {
         $auth = ezcWebdavServer::getInstance()->auth;
 
@@ -137,6 +142,18 @@ class ezcWebdavLockLockRequestResponseHandler extends ezcWebdavLockRequestRespon
         {
             if ( $res->status === ezcWebdavResponse::STATUS_404 )
             {
+                if ( $lockNullCreated )
+                {
+                    // The backend accepted the PUT, but the resource is not
+                    // found at the requested URI: creating it again would
+                    // recurse without end.
+                    return $this->createLockError(
+                        new ezcWebdavErrorResponse(
+                            ezcWebdavResponse::STATUS_409,
+                            $request->requestUri
+                        )
+                    );
+                }
                 return $this->createLockNullResource( $request );
             }
 
@@ -272,8 +289,9 @@ class ezcWebdavLockLockRequestResponseHandler extends ezcWebdavLockRequestRespon
             return $this->createLockError( $putRes );
         }
 
-        // Attention, recursion!
-        $res = $this->acquireLock( $request );
+        // Attention, recursion! At most once: acquireLock() does not create
+        // the resource a second time.
+        $res = $this->acquireLock( $request, true );
 
         if ( $res->status !== ezcWebdavResponse::STATUS_200 )
         {

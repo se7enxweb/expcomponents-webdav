@@ -81,7 +81,8 @@ class ezcWebdavNautilusPropertyHandler extends ezcWebdavPropertyHandler
         }
         else if ( is_scalar( $elementValue ) )
         {
-            $propertyElement->nodeValue = $elementValue;
+            // A text node escapes the value (an assignment to nodeValue reads "&" as an entity reference)
+            $propertyElement->appendChild( $propertyElement->ownerDocument->createTextNode( (string) $elementValue ) );
         }
 
         return $propertyElement;

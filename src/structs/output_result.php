@@ -63,7 +63,7 @@ class ezcWebdavOutputResult
     public function __construct( $status = '', array $header = array(), $body = '' )
     {
         $this->status = $status;
-        $this->header = $header;
+        $this->headers = $header;
         $this->body   = $body;
     }
 }

@@ -267,7 +267,7 @@ class ezcWebdavLockTools
      * @param ezcWebdavMultistatusResponse $response 
      * @return bool
      */
-    public function isLockError( ezcWebdavMultistatusResponse $response = null )
+    public function isLockError( ?ezcWebdavMultistatusResponse $response = null )
     {
         if ( $response === null )
         {
@@ -435,7 +435,7 @@ class ezcWebdavLockTools
      * @return array(string)
      */
     protected function extractActiveTokens(
-        ezcWebdavLockDiscoveryProperty $lockDiscovery = null,
+        ?ezcWebdavLockDiscoveryProperty $lockDiscovery,
         ezcWebdavAuth $authHeader
     )
     {
@@ -545,7 +545,7 @@ class ezcWebdavLockTools
     protected function createLockViolation(
         ezcWebdavErrorResponse $error,
         $node,
-        ezcWebdavLockDiscoveryProperty $lockDiscovery = null
+        ?ezcWebdavLockDiscoveryProperty $lockDiscovery = null
     )
     {
         $error->setPluginData(

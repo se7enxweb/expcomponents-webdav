@@ -68,6 +68,7 @@ class ezcWebdavDateTime extends DateTime
      * 
      * @return void
      */
+    #[\ReturnTypeWillChange]
     public function __wakeup()
     {
         $this->__construct( $this->backupTime );

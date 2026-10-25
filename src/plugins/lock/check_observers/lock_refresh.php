@@ -75,10 +75,17 @@ class ezcWebdavLockRefreshRequestGenerator implements ezcWebdavLockCheckObserver
 
     /**
      * The request that issued the lock refresh.
-     * 
-     * @var ezcWebdavLockIfHeaderList
+     *
+     * @var ezcWebdavRequest
      */
-    protected $request;
+    protected $issuingRequest;
+
+    /**
+     * The lock tokens of the If header, the locks to refresh.
+     *
+     * @var array(string)
+     */
+    protected $affectedTokens = array();
 
     /**
      * New timeout to set for the lock. 

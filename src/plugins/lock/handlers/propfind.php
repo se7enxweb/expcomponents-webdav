@@ -122,9 +122,14 @@ class ezcWebdavLockPropFindRequestResponseHandler extends ezcWebdavLockRequestRe
                         );
                         $propFindRes->responses = $responses;
                     }
-                    $status200Storage->attach(
-                        new ezcWebdavLockDiscoveryProperty()
-                    );
+                    // The lock discovery a backend found (the locks it
+                    // stored) is kept; only a missing one is added empty.
+                    if ( !$status200Storage->contains( 'lockdiscovery' ) )
+                    {
+                        $status200Storage->attach(
+                            new ezcWebdavLockDiscoveryProperty()
+                        );
+                    }
                     if ( $status404Storage !== null )
                     {
                         $status404Storage->detach( 'lockdiscovery' );

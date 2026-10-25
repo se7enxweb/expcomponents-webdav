@@ -920,12 +920,13 @@ class ezcWebdavTransport
             )
         );
 
-        if ( empty( $body ) )
+        // RFC 4918, 9.1: an empty PROPFIND request body MUST be treated as
+        // an allprop request (clients such as the Windows WebDAV redirector
+        // send none).
+        if ( trim( (string) $body ) === '' )
         {
-            throw new ezcWebdavInvalidRequestBodyException(
-                'PROPFIND',
-                "Could not open XML as DOMDocument: '{$body}'."
-            );
+            $request->allProp = true;
+            return $request;
         }
         try
         {

@@ -4,6 +4,11 @@
 Security fixes from zetacomponents/Webdav pull request #8, contributed by
 Ekkehard Doerre (CJW Network), and pull request #6:
 
+- Renamed: The package is now se7enxweb/expcomponents-webdav (repository
+  github.com/se7enxweb/expcomponents-webdav). It replaces
+  se7enxweb/zetacomponents-webdav and zetacomponents/webdav, so existing
+  requirements keep working; the class names (ezcWebdav*) are unchanged.
+
 - Fixed: Paths can no longer leave the root of ezcWebdavFileBackend. Both
   path factories remove "." and ".." segments (RFC 3986, section 5.2.4),
   also from the Destination header of COPY and MOVE and after a URI

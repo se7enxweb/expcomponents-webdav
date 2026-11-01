@@ -1,3 +1,52 @@
+1.2.2 - Sunday 1 November 2026
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Security fixes from zetacomponents/Webdav pull request #8, contributed by
+Ekkehard Doerre (CJW Network), and pull requests #6 and #7:
+
+- Renamed: The package is now se7enxweb/expcomponents-webdav (repository
+  github.com/se7enxweb/expcomponents-webdav). It replaces
+  se7enxweb/zetacomponents-webdav and zetacomponents/webdav, so existing
+  requirements keep working; the class names (ezcWebdav*) are unchanged.
+
+- Fixed: Paths can no longer leave the root of ezcWebdavFileBackend. Both
+  path factories remove "." and ".." segments (RFC 3986, section 5.2.4),
+  also from the Destination header of COPY and MOVE and after a URI
+  fragment is attached. The file backend refuses request URIs and
+  destinations that still contain such segments, also percent-encoded,
+  with 403 Forbidden.
+- Fixed: ezcWebdavFileBackend checks the real path (realpath()) of every
+  resource it reads, writes, lists, copies or deletes, so a symbolic link
+  inside the root that points outside of it, or a symbolic link whose
+  target does not exist, is no longer followed: requests through such a
+  link are refused with 403 Forbidden, collection listings leave it out,
+  a recursive COPY does not copy it and a recursive DELETE is refused
+  rather than following it. Symbolic links that stay inside the root keep
+  working.
+- Fixed: Request bodies with a document type declaration are refused with
+  400 Bad Request, before and after parsing, and are parsed with
+  LIBXML_NONET. The libxml error handling state is restored on errors.
+- Fixed: Digest authentication compares the digest in constant time and
+  sends a nonce from random_bytes().
+- Fixed: Lock tokens are created from random_bytes() as UUID version 4.
+- Added: Tests for the path factories, the file backend (including
+  symbolic links), ezcWebdavXmlTool and digest authentication that cover
+  these fixes.
+
+
+1.2.1 - Saturday 24 October 2026
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Fixed: PROPFIND, LOCK and property output work on PHP 8.
+- Fixed: Locks show in PROPFIND, an empty PROPFIND body asks for all
+  properties, lock refreshes declare their state.
+- Fixed: The component runs on PHP 8.1 to 8.5 without deprecation notices.
+- Added: Regression tests for the lock plugin, property escaping and the
+  output result on PHP 8.
+- Updated: Published as se7enxweb/zetacomponents-webdav, replacing
+  zetacomponents/webdav.
+
+
 1.2 - Saturday 27 September 2014
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

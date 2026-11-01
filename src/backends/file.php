@@ -128,6 +128,108 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
     }
 
     /**
+     * Assert that a resolved path is inside the configured root directory.
+     *
+     * @param string $resolvedPath The already realpath()-resolved absolute path.
+     * @throws ezcBaseValueException if the path escapes the root.
+     */
+    private function assertUnderRoot( $resolvedPath )
+    {
+        if ( !$this->isResolvedPathUnderRoot( $resolvedPath ) )
+        {
+            throw new ezcBaseValueException(
+                'path',
+                $resolvedPath,
+                'a path inside the WebDAV root directory'
+            );
+        }
+    }
+
+    /**
+     * Returns if a realpath()-resolved path is the root or inside of it.
+     *
+     * @param string $resolvedPath
+     * @return bool
+     */
+    private function isResolvedPathUnderRoot( $resolvedPath )
+    {
+        $root = rtrim( $this->root, '/\\' );
+        return $resolvedPath === $root
+            || strncmp( $resolvedPath, $root . DIRECTORY_SEPARATOR, strlen( $root ) + 1 ) === 0;
+    }
+
+    /**
+     * Returns if a file system path stays inside of the root once symbolic
+     * links are resolved.
+     *
+     * $absolutePath does not need to exist: the nearest existing ancestor is
+     * resolved instead, since that is where a new resource would be created.
+     * A symbolic link inside the root that points outside of it, or a
+     * symbolic link whose target does not exist (writing to it would create
+     * the target), counts as outside.
+     *
+     * @param string $absolutePath
+     * @return bool
+     */
+    private function isInsideRoot( $absolutePath )
+    {
+        $candidate = $absolutePath;
+        while ( ( $resolved = realpath( $candidate ) ) === false )
+        {
+            if ( is_link( $candidate ) )
+            {
+                return false;
+            }
+            $parent = dirname( $candidate );
+            if ( $parent === $candidate )
+            {
+                return false;
+            }
+            $candidate = $parent;
+        }
+        return $this->isResolvedPathUnderRoot( $resolved );
+    }
+
+    /**
+     * Resolve a client-supplied $path against the root directory.
+     *
+     * Returns the absolute filesystem path. Throws ezcBaseValueException
+     * if the path would escape the root directory. For resources that do not
+     * yet exist the parent directory must be inside the root.
+     *
+     * @param string $path Client-supplied resource path (starts with '/').
+     * @return string Absolute filesystem path safe to use for I/O.
+     */
+    private function resolveResourcePath( $path )
+    {
+        $candidate = $this->root . $path;
+        // If the resource already exists, use realpath() directly.
+        $resolved = realpath( $candidate );
+        if ( $resolved === false )
+        {
+            // A symbolic link with a missing target would be followed on write.
+            if ( is_link( $candidate ) )
+            {
+                throw new ezcBaseValueException(
+                    'path',
+                    $candidate,
+                    'a path inside the WebDAV root directory'
+                );
+            }
+            // Resource does not exist yet — resolve parent and append basename.
+            $resolvedParent = realpath( dirname( $candidate ) );
+            if ( $resolvedParent === false )
+            {
+                throw new ezcBaseFileNotFoundException( dirname( $candidate ) );
+            }
+            $this->assertUnderRoot( $resolvedParent );
+            return $resolvedParent . DIRECTORY_SEPARATOR . basename( $candidate );
+        }
+        $this->assertUnderRoot( $resolved );
+        return $resolved;
+    }
+
+    /**
      * Locks the backend.
      *
      * Tries to lock the backend. If the lock is already owned by this process,
@@ -385,8 +487,9 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     protected function createCollection( $path )
     {
-        mkdir( $this->root . $path );
-        chmod( $this->root . $path, $this->options->directoryMode );
+        $safePath = $this->resolveResourcePath( $path );
+        mkdir( $safePath );
+        chmod( $safePath, $this->options->directoryMode );
 
         // This automatically creates the property storage
         $storage = $this->getPropertyStoragePath( $path . '/foo' );
@@ -404,8 +507,9 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     protected function createResource( $path, $content = null )
     {
-        file_put_contents( $this->root . $path, $content );
-        chmod( $this->root . $path, $this->options->fileMode );
+        $safePath = $this->resolveResourcePath( $path );
+        file_put_contents( $safePath, $content );
+        chmod( $safePath, $this->options->fileMode );
 
         // This automatically creates the property storage if missing
         $storage = $this->getPropertyStoragePath( $path );
@@ -423,8 +527,9 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     protected function setResourceContents( $path, $content )
     {
-        file_put_contents( $this->root . $path, $content );
-        chmod( $this->root . $path, $this->options->fileMode );
+        $safePath = $this->resolveResourcePath( $path );
+        file_put_contents( $safePath, $content );
+        chmod( $safePath, $this->options->fileMode );
     }
 
     /**
@@ -438,7 +543,8 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     protected function getResourceContents( $path )
     {
-        return file_get_contents( $this->root . $path );
+        $safePath = $this->resolveResourcePath( $path );
+        return file_get_contents( $safePath );
     }
 
     /**
@@ -454,7 +560,20 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
     {
         // Get storage path for properties depending on the type of the
         // resource.
-        $storagePath = realpath( $this->root . dirname( $path ) ) 
+        $resolvedDir = realpath( $this->root . dirname( $path ) );
+        if ( $resolvedDir === false )
+        {
+            // Directory does not exist yet — verify the parent chain stays under root
+            // by checking the parent directory.
+            $resolvedDir = realpath( $this->root . dirname( dirname( $path ) ) );
+            if ( $resolvedDir === false )
+            {
+                $resolvedDir = $this->root;
+            }
+        }
+        $this->assertUnderRoot( $resolvedDir );
+
+        $storagePath = $resolvedDir
             . '/' . $this->options->propertyStoragePath . '/'
             . basename( $path ) . '.xml';
 
@@ -804,8 +923,10 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
     public function copyRecursive( $source, $destination, $depth = ezcWebdavRequest::DEPTH_INFINITY )
     {
         // Skip non readable files in source directory, or non writeable
-        // destination directories.
-        if ( !is_readable( $source ) || !is_writeable( dirname( $destination ) ) )
+        // destination directories. Symbolic links that point outside of the
+        // root are not followed.
+        if ( !$this->isInsideRoot( $source ) || !$this->isInsideRoot( $destination ) ||
+             !is_readable( $source ) || !is_writeable( dirname( $destination ) ) )
         {
             return array( $source );
         }
@@ -913,8 +1034,10 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
     public function checkDeleteRecursive( $source )
     {
         // Skip non readable files in source directory, or non writeable
-        // destination directories.
-        if ( !is_writeable( dirname( $source ) ) )
+        // destination directories. A symbolic link that points outside of
+        // the root blocks the deletion, since the recursive removal would
+        // follow it.
+        if ( !$this->isInsideRoot( $source ) || !is_writeable( dirname( $source ) ) )
         {
             return array(
                 new ezcWebdavErrorResponse(
@@ -1057,6 +1180,12 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
                 continue;
             }
 
+            // Hide symbolic links that point outside of the root.
+            if ( !$this->isInsideRoot( $file ) )
+            {
+                continue;
+            }
+
             $file = $path . '/' . basename( $file );
             if ( is_dir( $this->root . $file ) )
             {
@@ -1092,6 +1221,11 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function get( ezcWebdavGetRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock( true );
         $return = parent::get( $request );
         $this->freeLock();
@@ -1116,6 +1250,11 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function head( ezcWebdavHeadRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock( true );
         $return = parent::head( $request );
         $this->freeLock();
@@ -1146,6 +1285,11 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function propFind( ezcWebdavPropFindRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock( true );
         $return = parent::propFind( $request );
         $this->freeLock();
@@ -1173,6 +1317,11 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function propPatch( ezcWebdavPropPatchRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock();
         $return = parent::propPatch( $request );
         $this->freeLock();
@@ -1197,6 +1346,11 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function put( ezcWebdavPutRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock();
         $return = parent::put( $request );
         $this->freeLock();
@@ -1221,6 +1375,11 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function delete( ezcWebdavDeleteRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock();
         $return = parent::delete( $request );
         $this->freeLock();
@@ -1246,6 +1405,11 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function copy( ezcWebdavCopyRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock();
         $return = parent::copy( $request );
         $this->freeLock();
@@ -1271,6 +1435,11 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function move( ezcWebdavMoveRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock();
         $return = parent::move( $request );
         $this->freeLock();
@@ -1295,11 +1464,64 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     public function makeCollection( ezcWebdavMakeCollectionRequest $request )
     {
+        if ( ( $error = $this->checkRequestPaths( $request ) ) !== null )
+        {
+            return $error;
+        }
+
         $this->acquireLock();
         $return = parent::makeCollection( $request );
         $this->freeLock();
 
         return $return;
+    }
+
+    /**
+     * Refuses requests with paths that could point outside of the root.
+     *
+     * Every path in this backend is used as $this->root . $path, so a ".."
+     * segment in the request URI or in the Destination header of a COPY or
+     * MOVE request would address files outside of the root directory. The
+     * path factories shipped with this component remove such segments; this
+     * check protects against custom path factories and direct use of the
+     * backend. Both "/" and "\" count as separators, since Windows accepts
+     * both.
+     *
+     * Returns an error response with status 403 for such a request, null
+     * otherwise.
+     * 
+     * @param ezcWebdavRequest $request 
+     * @return ezcWebdavErrorResponse|null
+     */
+    private function checkRequestPaths( ezcWebdavRequest $request )
+    {
+        $paths = array( $request->requestUri );
+        if ( $request instanceof ezcWebdavCopyRequest || $request instanceof ezcWebdavMoveRequest )
+        {
+            $paths[] = $request->getHeader( 'Destination' );
+        }
+
+        foreach ( $paths as $path )
+        {
+            if ( ezcWebdavPathTools::hasDotSegments( $path, '/\\' ) )
+            {
+                return new ezcWebdavErrorResponse(
+                    ezcWebdavResponse::STATUS_403,
+                    $path,
+                    'Paths must not contain "." or ".." segments.'
+                );
+            }
+
+            if ( is_string( $path ) && !$this->isInsideRoot( $this->root . $path ) )
+            {
+                return new ezcWebdavErrorResponse(
+                    ezcWebdavResponse::STATUS_403,
+                    $path,
+                    'Path resolves to a location outside of the root.'
+                );
+            }
+        }
+        return null;
     }
 }
 

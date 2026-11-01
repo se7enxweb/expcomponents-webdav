@@ -1,8 +1,8 @@
-1.2.2 - Saturday 31 October 2026
+1.2.2 - Sunday 1 November 2026
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Security fixes from zetacomponents/Webdav pull request #8, contributed by
-Ekkehard Doerre (CJW Network), and pull request #6:
+Ekkehard Doerre (CJW Network), and pull requests #6 and #7:
 
 - Renamed: The package is now se7enxweb/expcomponents-webdav (repository
   github.com/se7enxweb/expcomponents-webdav). It replaces
@@ -15,14 +15,23 @@ Ekkehard Doerre (CJW Network), and pull request #6:
   fragment is attached. The file backend refuses request URIs and
   destinations that still contain such segments, also percent-encoded,
   with 403 Forbidden.
+- Fixed: ezcWebdavFileBackend checks the real path (realpath()) of every
+  resource it reads, writes, lists, copies or deletes, so a symbolic link
+  inside the root that points outside of it, or a symbolic link whose
+  target does not exist, is no longer followed: requests through such a
+  link are refused with 403 Forbidden, collection listings leave it out,
+  a recursive COPY does not copy it and a recursive DELETE is refused
+  rather than following it. Symbolic links that stay inside the root keep
+  working.
 - Fixed: Request bodies with a document type declaration are refused with
   400 Bad Request, before and after parsing, and are parsed with
   LIBXML_NONET. The libxml error handling state is restored on errors.
 - Fixed: Digest authentication compares the digest in constant time and
   sends a nonce from random_bytes().
 - Fixed: Lock tokens are created from random_bytes() as UUID version 4.
-- Added: Tests for the path factories, the file backend, ezcWebdavXmlTool
-  and digest authentication that cover these fixes.
+- Added: Tests for the path factories, the file backend (including
+  symbolic links), ezcWebdavXmlTool and digest authentication that cover
+  these fixes.
 
 
 1.2.1 - Saturday 24 October 2026

@@ -135,10 +135,7 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
      */
     private function assertUnderRoot( $resolvedPath )
     {
-        $rootWithSlash = rtrim( $this->root, DIRECTORY_SEPARATOR ) . DIRECTORY_SEPARATOR;
-        // Also allow exact match of root itself.
-        if ( strncmp( $resolvedPath . DIRECTORY_SEPARATOR, $rootWithSlash, strlen( $rootWithSlash ) ) !== 0
-             && $resolvedPath !== rtrim( $this->root, DIRECTORY_SEPARATOR ) )
+        if ( !$this->isResolvedPathUnderRoot( $resolvedPath ) )
         {
             throw new ezcBaseValueException(
                 'path',
@@ -146,6 +143,51 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
                 'a path inside the WebDAV root directory'
             );
         }
+    }
+
+    /**
+     * Returns if a realpath()-resolved path is the root or inside of it.
+     *
+     * @param string $resolvedPath
+     * @return bool
+     */
+    private function isResolvedPathUnderRoot( $resolvedPath )
+    {
+        $root = rtrim( $this->root, '/\\' );
+        return $resolvedPath === $root
+            || strncmp( $resolvedPath, $root . DIRECTORY_SEPARATOR, strlen( $root ) + 1 ) === 0;
+    }
+
+    /**
+     * Returns if a file system path stays inside of the root once symbolic
+     * links are resolved.
+     *
+     * $absolutePath does not need to exist: the nearest existing ancestor is
+     * resolved instead, since that is where a new resource would be created.
+     * A symbolic link inside the root that points outside of it, or a
+     * symbolic link whose target does not exist (writing to it would create
+     * the target), counts as outside.
+     *
+     * @param string $absolutePath
+     * @return bool
+     */
+    private function isInsideRoot( $absolutePath )
+    {
+        $candidate = $absolutePath;
+        while ( ( $resolved = realpath( $candidate ) ) === false )
+        {
+            if ( is_link( $candidate ) )
+            {
+                return false;
+            }
+            $parent = dirname( $candidate );
+            if ( $parent === $candidate )
+            {
+                return false;
+            }
+            $candidate = $parent;
+        }
+        return $this->isResolvedPathUnderRoot( $resolved );
     }
 
     /**
@@ -165,6 +207,15 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
         $resolved = realpath( $candidate );
         if ( $resolved === false )
         {
+            // A symbolic link with a missing target would be followed on write.
+            if ( is_link( $candidate ) )
+            {
+                throw new ezcBaseValueException(
+                    'path',
+                    $candidate,
+                    'a path inside the WebDAV root directory'
+                );
+            }
             // Resource does not exist yet — resolve parent and append basename.
             $resolvedParent = realpath( dirname( $candidate ) );
             if ( $resolvedParent === false )
@@ -872,8 +923,10 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
     public function copyRecursive( $source, $destination, $depth = ezcWebdavRequest::DEPTH_INFINITY )
     {
         // Skip non readable files in source directory, or non writeable
-        // destination directories.
-        if ( !is_readable( $source ) || !is_writeable( dirname( $destination ) ) )
+        // destination directories. Symbolic links that point outside of the
+        // root are not followed.
+        if ( !$this->isInsideRoot( $source ) || !$this->isInsideRoot( $destination ) ||
+             !is_readable( $source ) || !is_writeable( dirname( $destination ) ) )
         {
             return array( $source );
         }
@@ -981,8 +1034,10 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
     public function checkDeleteRecursive( $source )
     {
         // Skip non readable files in source directory, or non writeable
-        // destination directories.
-        if ( !is_writeable( dirname( $source ) ) )
+        // destination directories. A symbolic link that points outside of
+        // the root blocks the deletion, since the recursive removal would
+        // follow it.
+        if ( !$this->isInsideRoot( $source ) || !is_writeable( dirname( $source ) ) )
         {
             return array(
                 new ezcWebdavErrorResponse(
@@ -1121,6 +1176,12 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
             // Skip files used for somethig else...
             if ( ( strpos( $file, '/' . $this->options->lockFileName ) !== false ) ||
                  ( strpos( $file, '/' . $this->options->propertyStoragePath ) !== false ) )
+            {
+                continue;
+            }
+
+            // Hide symbolic links that point outside of the root.
+            if ( !$this->isInsideRoot( $file ) )
             {
                 continue;
             }
@@ -1448,6 +1509,15 @@ class ezcWebdavFileBackend extends ezcWebdavSimpleBackend implements ezcWebdavLo
                     ezcWebdavResponse::STATUS_403,
                     $path,
                     'Paths must not contain "." or ".." segments.'
+                );
+            }
+
+            if ( is_string( $path ) && !$this->isInsideRoot( $this->root . $path ) )
+            {
+                return new ezcWebdavErrorResponse(
+                    ezcWebdavResponse::STATUS_403,
+                    $path,
+                    'Path resolves to a location outside of the root.'
                 );
             }
         }

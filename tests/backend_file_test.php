@@ -523,6 +523,126 @@ class ezcWebdavFileBackendTest extends ezcTestCase
         $this->assertSame( ezcWebdavResponse::STATUS_403, $response->status );
     }
 
+    /**
+     * Creates <temp>/outside/secret.txt and returns the directory.
+     */
+    protected function createOutsideDirectory()
+    {
+        $outside = $this->tempDir . 'outside';
+        mkdir( $outside );
+        file_put_contents( $outside . '/secret.txt', 'secret' );
+        return $outside;
+    }
+
+    public function testSymbolicLinksOutsideOfRootAreRefused()
+    {
+        $outside = $this->createOutsideDirectory();
+        symlink( $outside, $this->tempDir . 'backend/link_dir' );
+        symlink( $outside . '/secret.txt', $this->tempDir . 'backend/link_file' );
+        $backend = new ezcWebdavFileBackend( $this->tempDir . 'backend/' );
+
+        foreach ( array( '/link_file', '/link_dir/secret.txt', '/link_dir' ) as $path )
+        {
+            $request = new ezcWebdavGetRequest( $path );
+            $request->validateHeaders();
+            $response = $backend->get( $request );
+            $this->assertTrue( $response instanceof ezcWebdavErrorResponse, "GET $path was not refused." );
+            $this->assertSame( ezcWebdavResponse::STATUS_403, $response->status );
+        }
+
+        $request = new ezcWebdavPutRequest( '/link_dir/new.txt', 'data' );
+        $request->setHeader( 'Content-Length', '4' );
+        $request->validateHeaders();
+        $response = $backend->put( $request );
+        $this->assertTrue( $response instanceof ezcWebdavErrorResponse, 'PUT through a link was not refused.' );
+        $this->assertFalse( file_exists( $outside . '/new.txt' ) );
+
+        $request = new ezcWebdavMakeCollectionRequest( '/link_dir/mkcol' );
+        $request->validateHeaders();
+        $response = $backend->makeCollection( $request );
+        $this->assertTrue( $response instanceof ezcWebdavErrorResponse, 'MKCOL through a link was not refused.' );
+        $this->assertFalse( file_exists( $outside . '/mkcol' ) );
+
+        $request = new ezcWebdavCopyRequest( '/link_file', '/copied' );
+        $request->validateHeaders();
+        $response = $backend->copy( $request );
+        $this->assertTrue( $response instanceof ezcWebdavErrorResponse, 'COPY from a link was not refused.' );
+        $this->assertFalse( file_exists( $this->tempDir . 'backend/copied' ) );
+
+        $request = new ezcWebdavMoveRequest( '/resource', '/link_dir/moved' );
+        $request->validateHeaders();
+        $response = $backend->move( $request );
+        $this->assertTrue( $response instanceof ezcWebdavErrorResponse, 'MOVE into a link was not refused.' );
+        $this->assertFalse( file_exists( $outside . '/moved' ) );
+        $this->assertTrue( file_exists( $this->tempDir . 'backend/resource' ) );
+
+        $request = new ezcWebdavDeleteRequest( '/link_dir/secret.txt' );
+        $request->validateHeaders();
+        $response = $backend->delete( $request );
+        $this->assertTrue( $response instanceof ezcWebdavErrorResponse, 'DELETE through a link was not refused.' );
+        $this->assertSame( 'secret', file_get_contents( $outside . '/secret.txt' ) );
+    }
+
+    public function testCollectionContainingSymbolicLinkOutsideOfRoot()
+    {
+        $outside = $this->createOutsideDirectory();
+        symlink( $outside, $this->tempDir . 'backend/collection/escape' );
+        $backend = new ezcWebdavFileBackend( $this->tempDir . 'backend/' );
+
+        // The link is not listed.
+        $request = new ezcWebdavGetRequest( '/collection' );
+        $request->validateHeaders();
+        $response = $backend->get( $request );
+        $this->assertTrue( $response instanceof ezcWebdavGetCollectionResponse );
+        foreach ( $response->collection->childs as $child )
+        {
+            $this->assertNotSame( '/collection/escape', $child->path );
+        }
+
+        // A copy of the collection does not copy what is outside.
+        $request = new ezcWebdavCopyRequest( '/collection', '/collection_copy' );
+        $request->setHeader( 'Depth', ezcWebdavRequest::DEPTH_INFINITY );
+        $request->validateHeaders();
+        $backend->copy( $request );
+        $this->assertTrue( is_file( $this->tempDir . 'backend/collection_copy/test.txt' ) );
+        $this->assertFalse( file_exists( $this->tempDir . 'backend/collection_copy/escape' ) );
+
+        // Deleting the collection does not remove anything outside.
+        $request = new ezcWebdavDeleteRequest( '/collection' );
+        $request->validateHeaders();
+        $response = $backend->delete( $request );
+        $this->assertFalse( $response instanceof ezcWebdavDeleteResponse, 'DELETE followed a link out of the root.' );
+        $this->assertSame( 'secret', file_get_contents( $outside . '/secret.txt' ) );
+    }
+
+    public function testDanglingSymbolicLinkIsRefused()
+    {
+        symlink( $this->tempDir . 'created.txt', $this->tempDir . 'backend/dangling' );
+        $backend = new ezcWebdavFileBackend( $this->tempDir . 'backend/' );
+
+        $request = new ezcWebdavPutRequest( '/dangling', 'data' );
+        $request->setHeader( 'Content-Length', '4' );
+        $request->validateHeaders();
+        $response = $backend->put( $request );
+        $this->assertTrue( $response instanceof ezcWebdavErrorResponse, 'PUT to a dangling link was not refused.' );
+        $this->assertFalse( file_exists( $this->tempDir . 'created.txt' ) );
+    }
+
+    public function testSymbolicLinkInsideOfRootIsServed()
+    {
+        symlink( $this->tempDir . 'backend/collection', $this->tempDir . 'backend/alias' );
+        $backend = new ezcWebdavFileBackend( $this->tempDir . 'backend/' );
+
+        $request = new ezcWebdavGetRequest( '/alias/test.txt' );
+        $request->validateHeaders();
+        $response = $backend->get( $request );
+        $this->assertTrue( $response instanceof ezcWebdavGetResourceResponse, 'A link inside of the root was refused.' );
+        $this->assertSame(
+            file_get_contents( $this->tempDir . 'backend/collection/test.txt' ),
+            $response->resource->content
+        );
+    }
+
     public function testResourceCopy()
     {
         $backend = new ezcWebdavFileBackend( $this->tempDir . 'backend/' );

@@ -42,7 +42,8 @@
     "name": "se7enxweb/expcomponents-webdav",
     "type": "library",
     "require": {
-        "zetacomponents/base": "~1.8"
+        "php": ">=7.1",
+        "se7enxweb/expcomponents-base": "~1.8"
     },
     "replace": {
         "se7enxweb/zetacomponents-webdav": "self.version",

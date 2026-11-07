@@ -56,9 +56,10 @@ class ezcWebdavXmlTool
     const XML_VERSION = '1.0';
 
     /**
-     * Encoding to use to create DOM documents. 
+     * Encoding to use to create DOM documents (written as given since PHP 8.5,
+     * so in its canonical spelling).
      */
-    const XML_ENCODING = 'utf-8';
+    const XML_ENCODING = 'UTF-8';
 
     /**
      * Properties.

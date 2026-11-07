@@ -573,7 +573,7 @@ class ezcWebdavMemoryBackend extends ezcWebdavSimpleBackend implements ezcWebdav
             if ( $causeErrors && preg_match( $this->options->failForRegexp, $fromPath ) > 0 )
             {
                 // Completely abort with error
-                return array( ezcWebdavErrorResponse(
+                return array( new ezcWebdavErrorResponse(
                     ezcWebdavResponse::STATUS_423,
                     $fromPath
                 ) );
@@ -581,7 +581,7 @@ class ezcWebdavMemoryBackend extends ezcWebdavSimpleBackend implements ezcWebdav
             if ( $causeErrors && preg_match( $this->options->failForRegexp, $toPath ) > 0 )
             {
                 // Completely abort with error
-                return array( ezcWebdavErrorResponse(
+                return array( new ezcWebdavErrorResponse(
                     ezcWebdavResponse::STATUS_412,
                     $toPath
                 ) );

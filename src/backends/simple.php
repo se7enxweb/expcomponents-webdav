@@ -1349,9 +1349,10 @@ abstract class ezcWebdavSimpleBackend extends ezcWebdavBackend implements ezcWeb
 
             $replaced = true;
 
-            if ( count( $delteErrors = $this->performDelete( $dest ) ) > 0 )
+            // performDelete() returns an ezcWebdavMultistatusResponse or null
+            if ( ( $deleteErrors = $this->performDelete( $dest ) ) !== null )
             {
-                return new ezcWebdavMultistatusResponse( $delteErrors );
+                return $deleteErrors;
             }
         }
 
@@ -1382,9 +1383,10 @@ abstract class ezcWebdavSimpleBackend extends ezcWebdavBackend implements ezcWeb
         // 
         // @todo: The error generated here should depend on the actual backend
         // implementation and  not be generated guessing what may fit.
-        if ( count( $deletion ) > 0 )
+        if ( $deletion !== null )
         {
-            return new ezcWebdavMultistatusResponse( $deletion );
+            // ezcWebdavMultistatusResponse
+            return $deletion;
         }
 
         // Send proper response on success

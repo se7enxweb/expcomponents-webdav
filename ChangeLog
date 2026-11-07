@@ -12,6 +12,13 @@ Unreleased - se7enxweb/expcomponents-webdav
   Authorization header parser assigned $res->$matchSet[1], which PHP 7 reads
   as ($res->$matchSet)[1] ("Array to string conversion"), so username,
   realm, nonce, uri, response, algorithm and opaque were never set.
+- Fixed: A MOVE that replaces an existing destination, or whose source cannot
+  be removed, failed on PHP 8 with a TypeError: the simple backend counted
+  the result of performDelete(), which is a multistatus response or null. It
+  returns that response, as DELETE does (PHP 7 wrapped it in a second
+  multistatus response).
+- Fixed: The memory backend's forced copy errors created their error
+  responses without "new", a fatal error.
 
 
 1.2.2 - Sunday 1 November 2026

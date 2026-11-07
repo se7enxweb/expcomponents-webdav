@@ -47,6 +47,20 @@ class ezcWebdavBasicServerTest extends ezcTestCase
 		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavBasicServerTest' );
 	}
 
+    /**
+     * The server is a singleton that earlier tests configure; reset() is what
+     * its constructor does, so every test starts with a new server's state.
+     */
+    protected function setUp(): void
+    {
+        ezcWebdavServer::getInstance()->reset();
+    }
+
+    protected function tearDown(): void
+    {
+        ezcWebdavServer::getInstance()->reset();
+    }
+
     public function testSingleton()
     {
         $srv = ezcWebdavServer::getInstance();

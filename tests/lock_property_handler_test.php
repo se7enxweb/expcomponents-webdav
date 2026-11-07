@@ -96,8 +96,11 @@ class ezcWebdavLockPropertyHandlerTest extends ezcTestCase
         );
         
         $resultElement = $this->propertyHandler->serializeLiveProperty( $property, $dummyDomElement, $xmlTool );
-        
-        $this->assertEquals(
+
+        // Same elements, attributes and text in the same namespaces; the
+        // prefixes and the indentation of the RFC examples may differ.
+        $this->assertInstanceOf( 'DOMElement', $resultElement );
+        ezcWebdavTestXmlStructureAssert::assertSameStructure(
             $expectedElement,
             $resultElement
         );

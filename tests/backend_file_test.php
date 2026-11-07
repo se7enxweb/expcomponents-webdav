@@ -157,7 +157,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
         }
     }
 
-    protected function compareResponse( $test, ezcWebdavResponse $response )
+    protected function compareResponse( $test, ezcWebdavResponse $response, $runDependent = false )
     {
         $dataDir = dirname( __FILE__ ) . '/data/responses/file';
 
@@ -167,12 +167,78 @@ class ezcWebdavFileBackendTest extends ezcTestCase
             return $this->markTestSkipped( 'Reponse serialized. Please check generated response.' );
         }
 
+        $expected = unserialize( file_get_contents( $file ) );
+        if ( $runDependent )
+        {
+            self::useRunDependentValues( $expected, $this->tempDir . 'backend' );
+        }
+
         $this->assertEquals(
             $response,
-            unserialize( file_get_contents( $file ) ),
+            $expected,
             'Response does not equal serialzed response.',
             20
         );
+    }
+
+    /**
+     * Sets creationdate, getetag and getcontenttype in the stored $expected
+     * response to the values the copied files under $root have in this run.
+     *
+     * These depend on the run and the machine: creationdate is the file's
+     * ctime, which is the time of this run (setUp() copies the files, and
+     * touch() cannot set a ctime); the content type comes from libmagic, whose
+     * answer differs between versions ("text/plain" or "text/plain;
+     * charset=us-ascii"); the ETag is recomputed as documented in
+     * ezcWebdavFileBackend::getETag() (path, content length and modification
+     * time in ISO 8601), with $mtime, the modification time setUp() gives
+     * every file (the request itself writes into the directories and changes
+     * their mtime afterwards). They are computed here from the files and
+     * these documented inputs, not by the backend under test; every other
+     * property and the structure of the response stay compared with the
+     * stored response as they are.
+     *
+     * @param ezcWebdavResponse $expected
+     * @param string $root
+     * @param int $mtime
+     * @return void
+     */
+    public static function useRunDependentValues( ezcWebdavResponse $expected, $root, $mtime = 2147483647 )
+    {
+        clearstatcache();
+        $responses = ( $expected instanceof ezcWebdavMultistatusResponse ) ? $expected->responses : array( $expected );
+        foreach ( $responses as $propFind )
+        {
+            $path = $propFind->node->path;
+            foreach ( $propFind->responses as $propStat )
+            {
+                $storage = $propStat->storage;
+                if ( $storage->contains( 'creationdate' ) )
+                {
+                    $storage->get( 'creationdate' )->date = new ezcWebdavDateTime( '@' . filectime( $root . $path ) );
+                }
+                if ( $storage->contains( 'getetag' ) && $storage->contains( 'getcontentlength' ) )
+                {
+                    $storage->get( 'getetag' )->etag = md5(
+                        $path
+                        . $storage->get( 'getcontentlength' )->length
+                        . date( 'c', $mtime )
+                    );
+                }
+                if ( $storage->contains( 'getcontenttype' ) )
+                {
+                    if ( extension_loaded( 'fileinfo' ) )
+                    {
+                        $fInfo = new finfo( FILEINFO_MIME );
+                        $storage->get( 'getcontenttype' )->mime = $fInfo->file( $root . $path );
+                    }
+                    else if ( function_exists( 'mime_content_type' ) )
+                    {
+                        $storage->get( 'getcontenttype' )->mime = mime_content_type( $root . $path );
+                    }
+                }
+            }
+        }
     }
 
     public function setUp(): void
@@ -1988,7 +2054,8 @@ class ezcWebdavFileBackendTest extends ezcTestCase
         $request->validateHeaders();
         $response = $backend->propfind( $request );
 
-        $this->compareResponse( __FUNCTION__, $response );
+        // creationdate, getetag and getcontenttype depend on the run (ctime) and on libmagic
+        $this->compareResponse( __FUNCTION__, $response, true );
     }
 
     public function testPropFindAllPropsOnCollection()
@@ -2000,7 +2067,8 @@ class ezcWebdavFileBackendTest extends ezcTestCase
         $request->validateHeaders();
         $response = $backend->propfind( $request );
 
-        $this->compareResponse( __FUNCTION__, $response );
+        // creationdate, getetag and getcontenttype depend on the run (ctime) and on libmagic
+        $this->compareResponse( __FUNCTION__, $response, true );
     }
 
     public function testPropPatchAddProperty()

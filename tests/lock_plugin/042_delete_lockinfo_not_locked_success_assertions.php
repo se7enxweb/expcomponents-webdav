@@ -4,7 +4,7 @@ class ezcWebdavLockPluginClientTestAssertions042
 {
     public function assertTargetGone( ezcWebdavMemoryBackend $backend )
     {
-        PHPUnit_Framework_Assert::assertFalse(
+        \PHPUnit\Framework\Assert::assertFalse(
             $backend->nodeExists( '/collection/resource.html' )
         );
     }
@@ -13,11 +13,11 @@ class ezcWebdavLockPluginClientTestAssertions042
     {
         $prop = $backend->getProperty( '/collection', 'lockdiscovery' );
 
-        PHPUnit_Framework_Assert::assertNotNull(
+        \PHPUnit\Framework\Assert::assertNotNull(
             $prop,
             'Lock discovery property removed from source.'
         );
-        PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             1,
             count( $prop->activeLock ),
             'Target parent active lock gone.'

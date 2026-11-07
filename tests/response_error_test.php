@@ -39,7 +39,7 @@ class ezcWebdavErrorResponseTest extends ezcTestCase
 {
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( 'ezcWebdavErrorResponseTest' );
+		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavErrorResponseTest' );
 	}
 
     public function testGetUnknownProperty()

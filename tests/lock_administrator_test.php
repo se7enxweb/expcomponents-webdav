@@ -39,10 +39,10 @@ class ezcWebdavLockAdministratorTest extends ezcTestCase
 
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $server = ezcWebdavServer::getInstance();
         $server->auth = new ezcWebdavTestAuth();
@@ -81,7 +81,7 @@ class ezcWebdavLockAdministratorTest extends ezcTestCase
 
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $server = ezcWebdavServer::getInstance();
         $server->auth = null;

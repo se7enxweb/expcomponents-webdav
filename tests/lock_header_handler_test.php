@@ -38,10 +38,10 @@ class ezcWebdavLockHeaderHandlerTest extends ezcTestCase
 {
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
         ezcWebdavServer::getInstance()->init(
             new ezcWebdavBasicPathFactory( 'http://example.com' ),
@@ -52,7 +52,7 @@ class ezcWebdavLockHeaderHandlerTest extends ezcTestCase
         );
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         ezcWebdavServer::getInstance()->reset();
     }

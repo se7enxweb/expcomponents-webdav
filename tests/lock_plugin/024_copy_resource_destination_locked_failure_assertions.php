@@ -4,7 +4,7 @@ class ezcWebdavLockPluginClientTestAssertions024
 {
     public function assertSourceStillExists( ezcWebdavMemoryBackend $backend )
     {
-        PHPUnit_Framework_Assert::assertTrue(
+        \PHPUnit\Framework\Assert::assertTrue(
             $backend->nodeExists( '/collection/resource.html' )
         );
     }
@@ -13,11 +13,11 @@ class ezcWebdavLockPluginClientTestAssertions024
     {
         $prop = $backend->getProperty( '/other_collection', 'lockdiscovery' );
 
-        PHPUnit_Framework_Assert::assertNotNull(
+        \PHPUnit\Framework\Assert::assertNotNull(
             $prop,
             'Lock discovery property set on destination parent.'
         );
-        PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             1,
             count( $prop->activeLock ),
             'Active lock available not on destination parent.'
@@ -26,7 +26,7 @@ class ezcWebdavLockPluginClientTestAssertions024
 
     public function assertDestinationNotExists( ezcWebdavMemoryBackend $backend )
     {
-        PHPUnit_Framework_Assert::assertFalse(
+        \PHPUnit\Framework\Assert::assertFalse(
             $backend->nodeExists( '/other_collection/moved_resource.html' ) 
         );
     }

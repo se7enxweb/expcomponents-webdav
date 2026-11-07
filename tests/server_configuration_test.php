@@ -44,14 +44,14 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
 {
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
 	}
 
     public function testCtorSuccess()
     {
         $cfg = new ezcWebdavServerConfiguration();
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'userAgentRegex'       => '(.*)',
                 'transportClass'       => 'ezcWebdavTransport',
@@ -69,7 +69,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             '(.*Nautilus.*)'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'userAgentRegex'       => '(.*Nautilus.*)',
                 'transportClass'       => 'ezcWebdavTransport',
@@ -88,7 +88,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             'ezcWebdavCustomTransport'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'userAgentRegex'       => '(.*Nautilus.*)',
                 'transportClass'       => 'ezcWebdavCustomTransport',
@@ -108,7 +108,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             'fooCustomXmlTool'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'userAgentRegex'       => '(.*Nautilus.*)',
                 'transportClass'       => 'fooCustomTransport',
@@ -129,7 +129,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             'fooCustomPropertyHandler'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'userAgentRegex'       => '(.*Nautilus.*)',
                 'transportClass'       => 'fooCustomTransport',
@@ -151,7 +151,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             'fooCustomHeaderHandler'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'userAgentRegex'       => '(.*Nautilus.*)',
                 'transportClass'       => 'fooCustomTransport',
@@ -174,7 +174,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             new ezcWebdavBasicPathFactory( 'http://example.com' )
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'userAgentRegex'       => '(.*Nautilus.*)',
                 'transportClass'       => 'fooCustomTransport',
@@ -230,7 +230,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             foreach ( $paramSet as $param )
             {
                 $params[$id] = $param;
-                $this->assertCtorFailure( $params, ( $i !== 5 ? 'ezcBaseValueException' : 'PHPUnit_Framework_Error' ) );
+                $this->assertCtorFailure( $params, ( $i !== 5 ? 'ezcBaseValueException' : 'TypeError' ) );
             }
         }
     }
@@ -322,7 +322,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             $cfg->$property = $value;
         }
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             $values,
             'properties',
             $cfg
@@ -512,7 +512,7 @@ class ezcWebdavServerConfigurationTest extends ezcTestCase
             $cfgClass = new ReflectionClass( 'ezcWebdavServerConfiguration' );
             $cfg = $cfgClass->newInstanceArgs( $args );
         }
-        catch( Exception $e )
+        catch( Throwable $e )
         {
             ( !( $e instanceof $exceptionClass ) ? var_dump( $e ) : null );
             $this->assertTrue(

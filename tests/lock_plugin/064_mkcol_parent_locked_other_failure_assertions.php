@@ -4,7 +4,7 @@ class ezcWebdavLockPluginClientTestAssertions064
 {
     public function assertCollectionNotCreated( ezcWebdavMemoryBackend $backend )
     {
-        PHPUnit_Framework_Assert::assertFalse(
+        \PHPUnit\Framework\Assert::assertFalse(
             $backend->nodeExists( '/collection/newcollection' )
         );
     }

@@ -24,6 +24,7 @@ Unreleased - se7enxweb/expcomponents-webdav
   <p:name/> without a declaration with libxml 2.9, which is not
   namespace-well-formed. Such a property is stored and written without the
   prefix, as older libxml versions did.
+- Updated: The tests run on PHPUnit 9 (PHP 7.4 to 8.5).
 
 
 1.2.2 - Sunday 1 November 2026

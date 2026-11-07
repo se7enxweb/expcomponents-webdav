@@ -81,7 +81,7 @@ class ezcWebdavClientTest extends ezcTestCase
         $this->setup    = $setup;
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->oldLibxmlErrorSetting = libxml_use_internal_errors( true );
 
@@ -98,7 +98,7 @@ class ezcWebdavClientTest extends ezcTestCase
         $this->backend->options->lockFile = $this->tmpDir . '/backend.lock';
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         libxml_use_internal_errors( $this->oldLibxmlErrorSetting );
         $this->removeTempDir();

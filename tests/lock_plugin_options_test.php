@@ -37,14 +37,14 @@ class ezcWebdavLockPluginOptionsTest extends ezcTestCase
 {
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
     public function testConstructorSuccess()
     {
         $opt = new ezcWebdavLockPluginOptions();
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'lockTimeout'         => 900,
                 'backendLockTimeout'  => 10000000,
@@ -62,7 +62,7 @@ class ezcWebdavLockPluginOptionsTest extends ezcTestCase
             )
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'lockTimeout'         => 123,
                 'backendLockTimeout'  => 123456,

@@ -39,15 +39,15 @@ class ezcWebdavMemoryBackendTest extends ezcTestCase
 {
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( 'ezcWebdavMemoryBackendTest' );
+		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavMemoryBackendTest' );
 	}
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->tmp = $this->createTempDir( __CLASS__ );
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->removeTempDir();
     }
@@ -3299,7 +3299,7 @@ class ezcWebdavMemoryBackendTest extends ezcTestCase
 
         $backend->unlock();
 
-        $this->assertFileNotExists(
+        $this->assertFileDoesNotExist(
             $backend->options->lockFile,
             'Lock file not removed.'
         );

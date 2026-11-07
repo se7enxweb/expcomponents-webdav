@@ -18,7 +18,7 @@ class ezcWebdavTestSetContainer extends ArrayObject
     {
         if ( !file_exists( $testSetFile ) )
         {
-            throw new PHPUnit_Framework_ExpectationFailedException(
+            throw new \PHPUnit\Framework\ExpectationFailedException(
                 "Test set file '{$testSetFile}' not found."
             );
         }

@@ -38,7 +38,7 @@ class ezcWebdavLockIfHeaderNoTagListTest extends ezcTestCase
 {
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
     public function testConstructor()
@@ -46,7 +46,7 @@ class ezcWebdavLockIfHeaderNoTagListTest extends ezcTestCase
         $item = array( new ezcWebdavLockIfHeaderListItem() );
         $list = new ezcWebdavLockIfHeaderNoTagList( $item );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             $item,
             'items',
             $list
@@ -65,7 +65,7 @@ class ezcWebdavLockIfHeaderNoTagListTest extends ezcTestCase
         }
         catch ( RuntimeException $e ) {}
 
-        $this->assertAttributeSame(
+        ezcWebdavTestAttributeAssert::assertAttributeSame(
             $item,
             'items',
             $list
@@ -155,7 +155,7 @@ class ezcWebdavLockIfHeaderNoTagListTest extends ezcTestCase
         }
         catch ( RuntimeException $e ) {}
 
-        $this->assertAttributeSame(
+        ezcWebdavTestAttributeAssert::assertAttributeSame(
             $item,
             'items',
             $list

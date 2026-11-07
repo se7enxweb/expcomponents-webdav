@@ -41,16 +41,16 @@ class ezcWebdavHeaderHandlerTest extends ezcTestCase
 
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->oldServer = $_SERVER;
         $_SERVER         = array();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $_SERVER = $this->oldServer;
     }

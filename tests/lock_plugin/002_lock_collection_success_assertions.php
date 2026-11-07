@@ -5,21 +5,21 @@ class ezcWebdavLockPluginClientTestAssertions002
     function assertLockDiscoveryPropertyCorrect( ezcWebdavMemoryBackend $backend )
     {
         $prop = $backend->getProperty( '/collection', 'lockdiscovery' );
-        PHPUnit_Framework_Assert::assertNotNull(
+        \PHPUnit\Framework\Assert::assertNotNull(
             $prop,
             'Lock discovery property not set.'
         );
-        PHPUnit_Framework_Assert::assertInstanceOf(
+        \PHPUnit\Framework\Assert::assertInstanceOf(
             'ezcWebdavLockDiscoveryProperty',
             $prop,
             'Lock discovery property has incorrect type.'
         );
-        PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             1,
             count( $prop->activeLock ),
             'Number of activeLock elements incorrect.'
         );
-        PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             new ezcWebdavPotentialUriContent(
                 'http://example.com/some/user',
                 true
@@ -29,21 +29,21 @@ class ezcWebdavLockPluginClientTestAssertions002
         );
 
         $prop = $backend->getProperty( '/collection/resource.html', 'lockdiscovery' );
-        PHPUnit_Framework_Assert::assertNotNull(
+        \PHPUnit\Framework\Assert::assertNotNull(
             $prop,
             'Lock discovery property not set.'
         );
-        PHPUnit_Framework_Assert::assertInstanceOf(
+        \PHPUnit\Framework\Assert::assertInstanceOf(
             'ezcWebdavLockDiscoveryProperty',
             $prop,
             'Lock discovery property has incorrect type.'
         );
-        PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             1,
             count( $prop->activeLock ),
             'Number of activeLock elements incorrect.'
         );
-        PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             new ezcWebdavPotentialUriContent(
                 'http://example.com/some/user',
                 true

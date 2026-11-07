@@ -47,10 +47,10 @@ class ezcWebdavSimpleBackendTest extends ezcTestCase
 
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
 	}
 
-    public function setUp()
+    public function setUp(): void
     {
         static $i = 0;
 
@@ -62,14 +62,14 @@ class ezcWebdavSimpleBackendTest extends ezcTestCase
         );
 
         // Remove SVN directories from temporary backend
-        $svnDirs = ezcFile::findRecursive(
+        $svnDirs = ezcBaseFile::findRecursive(
             $this->tempDir . 'backend/',
             array( '(/\.svn/entries$)' )
         );
 
         foreach ( $svnDirs as $dir )
         {
-            ezcFile::removeRecursive( dirname( $dir ) );
+            ezcBaseFile::removeRecursive( dirname( $dir ) );
         }
 
         // Explicitely set mtime and ctime
@@ -84,7 +84,7 @@ class ezcWebdavSimpleBackendTest extends ezcTestCase
         date_default_timezone_set( 'UTC' );
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         // Reset old timezone
         date_default_timezone_set( $this->oldTimezone );

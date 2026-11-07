@@ -48,10 +48,10 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
 	}
 
-    protected function setUp()
+    protected function setUp(): void
     {
         self::$beforeParams = null;
         self::$afterParams  = null;
@@ -73,7 +73,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(),
             'plugins',
             $reg,
@@ -91,7 +91,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
         
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => $cfg
             ),
@@ -99,7 +99,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
                 'ezcWebdavTransport' => array(
                     'beforeParseRequest' => array(
@@ -131,7 +131,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
         
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => $cfg
             ),
@@ -223,7 +223,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
         
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => $cfg
             ),
@@ -231,7 +231,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
                 'ezcWebdavTransport' => array(
                     'beforeParseRequest' => array(
@@ -255,14 +255,14 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
         $reg->unregisterPlugin( $cfg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
             ),
             'plugins',
             $reg
         );
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
                 'ezcWebdavTransport' => array(
                     'beforeParseRequest' => array(
@@ -284,7 +284,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
             ),
             'plugins',
@@ -322,7 +322,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
         
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => $cfg,
             ),
@@ -330,7 +330,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
                 'ezcWebdavTransport' => array(
                     'beforeParseRequest' => array(
@@ -365,14 +365,14 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
             ),
             'plugins',
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
             ),
             'assignedHooks',
@@ -389,14 +389,14 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
             ),
             'plugins',
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
             ),
             'assignedHooks',
@@ -414,7 +414,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
         
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => $cfg,
             ),
@@ -422,7 +422,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
                 'ezcWebdavTransport' => array(
                     'beforeParseRequest' => array(
@@ -456,14 +456,14 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
             ),
             'plugins',
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
             ),
             'assignedHooks',
@@ -477,14 +477,14 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
             ),
             'plugins',
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
             ),
             'assignedHooks',
@@ -502,7 +502,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
         
         $this->assertHooksCorrect( $reg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => $cfg,
             ),
@@ -510,7 +510,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
             $reg
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
              array(
                 'ezcWebdavTransport' => array(
                     'beforeParseRequest' => array(
@@ -581,7 +581,7 @@ class ezcWebdavPluginRegistryTest extends ezcTestCase
 
     protected function assertHooksCorrect( ezcWebdavPluginRegistry $reg )
     {
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array (
                 'ezcWebdavTransport' => array (
                     'beforeParseRequest'     => true,

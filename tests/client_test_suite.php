@@ -1,8 +1,8 @@
 <?php
 
-require_once 'Webdav/tests/client_test.php';
+require_once __DIR__ . '/client_test.php';
 
-class ezcWebdavClientTestSuite extends PHPUnit_Framework_TestSuite
+class ezcWebdavClientTestSuite extends \PHPUnit\Framework\TestSuite
 {
     protected $testSets;
 

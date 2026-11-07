@@ -4,11 +4,11 @@ class ezcWebdavLockPluginClientTestAssertions012
 {
     public function assertLockNullResourceNotRemoved( ezcWebdavMemoryBackend $backend )
     {
-        PHPUnit_Framework_Assert::assertTrue(
+        \PHPUnit\Framework\Assert::assertTrue(
             $backend->nodeExists( '/collection/resource.html' ),
             'Lock null resource /collection/resource.html not gone.'
         );
-        PHPUnit_Framework_Assert::assertTrue(
+        \PHPUnit\Framework\Assert::assertTrue(
             $backend->nodeExists( '/collection' ),
             'Collection /collection is gone.'
         );
@@ -18,12 +18,12 @@ class ezcWebdavLockPluginClientTestAssertions012
     {
         $prop = $backend->getProperty( '/collection', 'lockdiscovery' );
 
-        PHPUnit_Framework_Assert::assertInstanceOf(
+        \PHPUnit\Framework\Assert::assertInstanceOf(
             'ezcWebdavLockDiscoveryProperty',
             $prop,
             'Property has incorrect type.'
         );
-        PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             0,
             count( $prop->activeLock ),
             'Active lock element not removed correctly from root.'

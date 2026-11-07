@@ -38,14 +38,14 @@ class ezcWebdavLockIfHeaderTaggedListTest extends ezcTestCase
 {
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
     public function testConstructor()
     {
         $list = new ezcWebdavLockIfHeaderTaggedList();
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(),
             'items',
             $list
@@ -62,7 +62,7 @@ class ezcWebdavLockIfHeaderTaggedListTest extends ezcTestCase
         $list['/some/path'] = $item1;
         $list['/'] = $item2;
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array( '/some/path' => $item1, '/' => $item2 ),
             'items',
             $list
@@ -101,7 +101,7 @@ class ezcWebdavLockIfHeaderTaggedListTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(),
             'items',
             $list

@@ -39,7 +39,7 @@ class ezcWebdavLockResponseTest extends ezcTestCase
 {
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( 'ezcWebdavLockResponseTest' );
+		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavLockResponseTest' );
 	}
 
     public function testGetUnknownProperty()
@@ -103,7 +103,7 @@ class ezcWebdavLockResponseTest extends ezcTestCase
     public function testLockResponseConstructor()
     {
         $lockDiscovery = new ezcWebdavLockDiscoveryProperty();
-        $response      = new ezcWebdavLockResponse( $lockDiscovery, 'some lock token' );
+        $response      = new ezcWebdavLockResponse( $lockDiscovery, ezcWebdavResponse::STATUS_200, 'some lock token' );
 
         $response->setHeader( 'Server', 'Some server' );
         $response->validateHeaders();
@@ -117,7 +117,7 @@ class ezcWebdavLockResponseTest extends ezcTestCase
     public function testLockResponseToString()
     {
         $lockDiscovery = new ezcWebdavLockDiscoveryProperty();
-        $response      = new ezcWebdavLockResponse( $lockDiscovery, 'some lock token' );
+        $response      = new ezcWebdavLockResponse( $lockDiscovery, ezcWebdavResponse::STATUS_200, 'some lock token' );
 
         $this->assertSame(
             'HTTP/1.1 200 OK',

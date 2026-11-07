@@ -4,7 +4,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
 {
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
     public function testAttachLiveProperty()
@@ -14,7 +14,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
 
         $storage->attach( $prop );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'DAV:' => array(
                     'getcontentlength' => $prop,
@@ -32,7 +32,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
 
         $storage->attach( $prop );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'http://example.com/foo/bar' => array(
                     'foobar' => $prop,
@@ -52,7 +52,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
         $storage->attach( $liveProp );
         $storage->attach( $deadProp );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'DAV:' => array(
                     'getcontentlength' => $liveProp,
@@ -77,7 +77,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
         $storage->attach( $liveProp );
         $storage->attach( $deadProp );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'DAV:' => array(
                     'getcontentlength' => $liveProp,
@@ -93,7 +93,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
         $storage->attach( $liveProp2 );
         $storage->attach( $deadProp2 );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'DAV:' => array(
                     'getcontentlength' => $liveProp2,
@@ -114,7 +114,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
 
         $storage->attach( $liveProp );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'DAV:' => array(
                     'getcontentlength' => $liveProp,
@@ -126,7 +126,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
 
         $storage->detach( 'getcontentlength' );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'DAV:' => array(),
             ),
@@ -142,7 +142,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
 
         $storage->attach( $deadProp );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'http://example.com/foo/bar' => array(
                     'foobar' => $deadProp,
@@ -154,7 +154,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
 
         $storage->detach( 'foobar', 'http://example.com/foo/bar' );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'http://example.com/foo/bar' => array()
             ),
@@ -172,7 +172,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
         $storage->attach( $liveProp );
         $storage->attach( $deadProp );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'DAV:' => array(
                     'getcontentlength' => $liveProp,
@@ -188,7 +188,7 @@ class ezcWebdavPropertyStorageTest extends ezcTestCase
         $storage->detach( 'getcontentlength' );
         $storage->detach( 'foobar', 'http://example.com/foo/bar' );
  
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'DAV:' => array(
                 ),

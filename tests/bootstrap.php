@@ -12,3 +12,9 @@ phpunit
 EOT
        );
 }
+
+// Test helpers the test files use without including them
+require_once __DIR__ . '/classes/attribute_assert.php';
+// The replay test case the client test suites instantiate with recorded data;
+// loaded here so PHPUnit does not take it for a test class of each client file.
+require_once __DIR__ . '/client_test.php';

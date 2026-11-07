@@ -56,16 +56,16 @@ class ezcWebdavServerAuthTest extends ezcTestCase
 
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
 	}
 
-    public function setUp()
+    public function setUp(): void
     {
         $srv = ezcWebdavServer::getInstance();
         $srv->reset();
 
         // Unset all configurations
-        $numConfigs = count( $srv->configurations );
+        $numConfigs = iterator_count( $srv->configurations );
         for ( $i = $numConfigs - 1; $i >= 0; --$i )
         {
             unset( $srv->configurations[$i] );

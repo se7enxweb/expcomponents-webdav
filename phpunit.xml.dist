@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="./tests/bootstrap.php" colors="true">
+<!-- backupGlobals: the tests set $_SERVER and $_GET and rely on PHPUnit restoring
+     them after each test, as PHPUnit 3 did by default -->
+<phpunit bootstrap="./tests/bootstrap.php" colors="true" backupGlobals="true">
     <testsuites>
         <testsuite name="Zeta Components Webdav">
             <directory suffix="_test.php">./tests</directory>
+            <!-- a command line tool that converts recorded client data, not a test -->
+            <exclude>./tests/scripts</exclude>
         </testsuite>
     </testsuites>
 

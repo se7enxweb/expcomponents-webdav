@@ -6,18 +6,18 @@ class ezcWebdavLockPluginClientTestAssertions008
     {
         $prop = $backend->getProperty( '/collection', 'lockdiscovery' );
 
-        PHPUnit_Framework_Assert::assertNull(
+        \PHPUnit\Framework\Assert::assertNull(
             $prop
         );
 
         $prop = $backend->getProperty( '/collection/resource.html', 'lockdiscovery' );
 
-        PHPUnit_Framework_Assert::assertInstanceOf(
+        \PHPUnit\Framework\Assert::assertInstanceOf(
             'ezcWebdavLockDiscoveryProperty',
             $prop,
             'Property has incorrect type.'
         );
-        PHPUnit_Framework_Assert::assertEquals(
+        \PHPUnit\Framework\Assert::assertEquals(
             0,
             count( $prop->activeLock ),
             'Active lock element not removed correctly.'

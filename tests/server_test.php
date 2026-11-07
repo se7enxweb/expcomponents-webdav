@@ -44,7 +44,7 @@ class ezcWebdavBasicServerTest extends ezcTestCase
 {
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( 'ezcWebdavBasicServerTest' );
+		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavBasicServerTest' );
 	}
 
     public function testSingleton()
@@ -59,7 +59,7 @@ class ezcWebdavBasicServerTest extends ezcTestCase
     {
         $srv = ezcWebdavServer::getInstance();
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'configurations'  => new ezcWebdavServerConfigurationManager(),
                 'pluginRegistry'  => new ezcWebdavPluginRegistry(),
@@ -123,7 +123,7 @@ class ezcWebdavBasicServerTest extends ezcTestCase
     {
         $srv = ezcWebdavServer::getInstance();
 
-        $auth = $this->getMock( 'ezcWebdavBasicAuthenticator' );
+        $auth = $this->getMockBuilder( 'ezcWebdavBasicAuthenticator' )->getMock();
 
         $setValues = array(
             'configurations' => new ezcWebdavServerConfigurationManager(),
@@ -148,7 +148,7 @@ class ezcWebdavBasicServerTest extends ezcTestCase
             $srv->$property = $value;
         }
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             $checkValues,
             'properties',
             $srv

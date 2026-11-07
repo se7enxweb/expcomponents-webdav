@@ -29,7 +29,7 @@
  * Reqiuire base test
  */
 
-require_once 'Webdav/tests/classes/test_auth.php';
+require_once __DIR__ . '/classes/test_auth.php';
 
 /**
  * Tests for ezcWebdavAuthenticator class.
@@ -43,7 +43,7 @@ class ezcWebdavAuthenticatorTest extends ezcTestCase
 
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
     public function testAnonymousAuth()

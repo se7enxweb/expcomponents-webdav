@@ -4,7 +4,7 @@ class ezcWebdavLockPluginClientTestAssertions041
 {
     public function assertTargetGone( ezcWebdavMemoryBackend $backend )
     {
-        PHPUnit_Framework_Assert::assertFalse(
+        \PHPUnit\Framework\Assert::assertFalse(
             $backend->nodeExists( '/collection' )
         );
     }

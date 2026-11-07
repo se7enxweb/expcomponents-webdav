@@ -4,7 +4,7 @@ class ezcWebdavLockPluginClientTestAssertions073
 {
     public function assertCollectionCreated( ezcWebdavMemoryBackend $backend )
     {
-        PHPUnit_Framework_Assert::assertTrue(
+        \PHPUnit\Framework\Assert::assertTrue(
             $backend->nodeExists( '/collection/newresource' )
         );
     }
@@ -14,7 +14,7 @@ class ezcWebdavLockPluginClientTestAssertions073
         $parentProp = $backend->getProperty( '/collection', 'lockdiscovery' );
         $childProp  = $backend->getProperty( '/collection/newresource', 'lockdiscovery' );
 
-        PHPUnit_Framework_Assert::assertNotEquals(
+        \PHPUnit\Framework\Assert::assertNotEquals(
             $parentProp,
             $childProp,
             'New collection did inherit parents lock.'

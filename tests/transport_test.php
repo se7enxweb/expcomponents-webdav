@@ -64,10 +64,10 @@ class ezcWebdavTransportTest extends ezcTestCase
 {
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
 	}
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         ezcWebdavServer::getInstance()->init(
@@ -79,7 +79,7 @@ class ezcWebdavTransportTest extends ezcTestCase
         );
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         ezcWebdavServer::getInstance()->reset();
         parent::tearDown();

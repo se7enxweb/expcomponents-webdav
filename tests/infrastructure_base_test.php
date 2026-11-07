@@ -54,10 +54,10 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
 
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
 	}
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $srv = ezcWebdavServer::getInstance();
 
@@ -70,7 +70,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
         $srv->pluginRegistry->registerPlugin( $this->namespaces['namespacebar'] );
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $srv = ezcWebdavServer::getInstance();
 
@@ -84,7 +84,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
         
         $base->setPluginData( 'foonamespace', 'barkey', array( 23, 42 ) );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => array(
                     'barkey' => array( 23, 42 ),
@@ -97,7 +97,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
         
         $base->setPluginData( 'foonamespace', 'bazkey', true );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => array(
                     'barkey' => array( 23, 42 ),
@@ -111,7 +111,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
         
         $base->setPluginData( 'namespacebar', 'keyfoo', new stdClass() );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => array(
                     'barkey' => array( 23, 42 ),
@@ -156,7 +156,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
         $base->setPluginData( 'foonamespace', 'bazkey', true );
         $base->setPluginData( 'namespacebar', 'keyfoo', new stdClass() );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => array(
                     'barkey' => array( 23, 42 ),
@@ -173,7 +173,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
 
         $base->removePluginData( 'foonamespace', 'barkey' );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => array(
                     'bazkey' => true,
@@ -189,7 +189,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
 
         $base->removePluginData( 'namespacebar', 'keyfoo' );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => array(
                     'bazkey' => true,
@@ -204,7 +204,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
 
         $base->removePluginData( 'foonamespace', 'bazkey' );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => array(
                 ),
@@ -232,7 +232,7 @@ class ezcWebdavInfrastructureBaseTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 'foonamespace' => array(
                     'barkey' => array( 23, 42 ),

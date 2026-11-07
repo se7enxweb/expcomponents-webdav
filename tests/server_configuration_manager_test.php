@@ -44,14 +44,14 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 {
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
 	}
 
     public function testCtor()
     {
         $dp = new ezcWebdavServerConfigurationManager();
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -95,7 +95,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
             'ezcWebdavNautilusPropertyHandler'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => $secondCfg,
                 1 => $fourthCfg,
@@ -113,7 +113,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         $dp->insertBefore( $fifthCfg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => $fifthCfg,
                 1 => $secondCfg,
@@ -132,7 +132,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         $dp->insertBefore( $sixthCfg, 1 );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => $fifthCfg,
                 1 => $sixthCfg,
@@ -148,7 +148,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         $dp->insertBefore( $thirdCfg );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => $thirdCfg,
                 1 => $fifthCfg,
@@ -170,7 +170,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         $firstCfg = new ezcWebdavServerConfiguration();
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -204,7 +204,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -234,7 +234,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -264,7 +264,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -294,7 +294,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -427,7 +427,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         $dp[1]   = $first;
         $dp[]    = $second;
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -448,7 +448,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         $dp[0]    = $second;
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => $second,
                 1 => $first,
@@ -479,7 +479,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -509,7 +509,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -539,7 +539,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -569,7 +569,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -599,7 +599,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -629,7 +629,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -659,7 +659,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -692,7 +692,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         $dp[1]   = $first;
         $dp[]    = $second;
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -760,7 +760,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
             'Offset 4 not null.'
         );
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -790,7 +790,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -820,7 +820,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -851,7 +851,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         $dp      = new ezcWebdavServerConfigurationManager();
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -876,7 +876,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         $dp[1]   = $first;
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -896,7 +896,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         
         $dp[]    = $second;
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -917,7 +917,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         unset( $dp[1] );
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -937,7 +937,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         unset( $dp[1] );
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -953,7 +953,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         unset( $dp[1] );
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -968,7 +968,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         unset( $dp[1] );
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0  => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -982,7 +982,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
 
         unset( $dp[0] );
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
             ),
             'configurations',
@@ -1004,7 +1004,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
             'Offset 3 not null.'
         );
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -1033,7 +1033,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -1062,7 +1062,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         }
         catch ( ezcBaseValueException $e ) {}
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -1094,7 +1094,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         $dp[1]   = $first;
         $dp[]    = $second;
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',
@@ -1144,7 +1144,7 @@ class ezcWebdavServerConfigurationManagerTest extends ezcTestCase
         $dp[1]   = $first;
         $dp[]    = $second;
         
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(
                 0 => new ezcWebdavServerConfiguration(
                     '(Microsoft\s+Data\s+Access|MSIE|MiniRedir)i',

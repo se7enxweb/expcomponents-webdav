@@ -38,14 +38,14 @@ class ezcWebdavLockLockRequestGeneratorTest extends ezcTestCase
 {
     public static function suite()
     {
-		return new PHPUnit_Framework_TestSuite( __CLASS__ );
+		return new \PHPUnit\Framework\TestSuite( __CLASS__ );
     }
 
-    protected function setUp()
+    protected function setUp(): void
     {
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
     }
 
@@ -61,17 +61,17 @@ class ezcWebdavLockLockRequestGeneratorTest extends ezcTestCase
             $activeLock
         );
 
-        $this->assertAttributeSame(
+        ezcWebdavTestAttributeAssert::assertAttributeSame(
             $lockReq,
-            'issueingRequest',
+            'issuingRequest',
             $reqGen
         );
-        $this->assertAttributeSame(
+        ezcWebdavTestAttributeAssert::assertAttributeSame(
             $activeLock,
             'activeLock',
             $reqGen
         );
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array(),
             'requests',
             $reqGen
@@ -116,9 +116,21 @@ class ezcWebdavLockLockRequestGeneratorTest extends ezcTestCase
         );
 
         // Perform notify
+        $before = time();
         $reqGen->notify( $propFindRes );
 
-        $this->assertAttributeEquals(
+        // The lock base records the time of the lock as its last access
+        $requests = ezcWebdavTestAttributeAssert::readAttribute( $reqGen, 'requests' );
+        $this->assertCount( 1, $requests );
+        $requests[0]->updates->rewind();
+        $locks = $requests[0]->updates->current()->activeLock;
+        $lastAccess = $locks[count( $locks ) - 1]->lastAccess;
+        $this->assertInstanceOf( 'ezcWebdavDateTime', $lastAccess );
+        $this->assertGreaterThanOrEqual( $before, (int) $lastAccess->format( 'U' ) );
+        $this->assertLessThanOrEqual( time(), (int) $lastAccess->format( 'U' ) );
+        $activeLock->lastAccess = $lastAccess;
+
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array( $result ),
             'requests',
             $reqGen
@@ -146,7 +158,7 @@ class ezcWebdavLockLockRequestGeneratorTest extends ezcTestCase
                         ezcWebdavLockRequest::TYPE_WRITE,
                         ezcWebdavLockRequest::SCOPE_EXCLUSIVE,
                         ezcWebdavRequest::DEPTH_INFINITY,
-                        'somone@example.com'
+                        new ezcWebdavPotentialUriContent( 'somone@example.com' )
                     )
                 )
             )
@@ -177,9 +189,21 @@ class ezcWebdavLockLockRequestGeneratorTest extends ezcTestCase
         );
 
         // Perform notify
+        $before = time();
         $reqGen->notify( $propFindRes );
 
-        $this->assertAttributeEquals(
+        // The lock base records the time of the lock as its last access
+        $requests = ezcWebdavTestAttributeAssert::readAttribute( $reqGen, 'requests' );
+        $this->assertCount( 1, $requests );
+        $requests[0]->updates->rewind();
+        $locks = $requests[0]->updates->current()->activeLock;
+        $lastAccess = $locks[count( $locks ) - 1]->lastAccess;
+        $this->assertInstanceOf( 'ezcWebdavDateTime', $lastAccess );
+        $this->assertGreaterThanOrEqual( $before, (int) $lastAccess->format( 'U' ) );
+        $this->assertLessThanOrEqual( time(), (int) $lastAccess->format( 'U' ) );
+        $activeLock->lastAccess = $lastAccess;
+
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array( $result ),
             'requests',
             $reqGen
@@ -232,9 +256,21 @@ class ezcWebdavLockLockRequestGeneratorTest extends ezcTestCase
         );
 
         // Perform notify
+        $before = time();
         $reqGen->notify( $propFindRes );
 
-        $this->assertAttributeEquals(
+        // The lock base records the time of the lock as its last access
+        $requests = ezcWebdavTestAttributeAssert::readAttribute( $reqGen, 'requests' );
+        $this->assertCount( 1, $requests );
+        $requests[0]->updates->rewind();
+        $locks = $requests[0]->updates->current()->activeLock;
+        $lastAccess = $locks[count( $locks ) - 1]->lastAccess;
+        $this->assertInstanceOf( 'ezcWebdavDateTime', $lastAccess );
+        $this->assertGreaterThanOrEqual( $before, (int) $lastAccess->format( 'U' ) );
+        $this->assertLessThanOrEqual( time(), (int) $lastAccess->format( 'U' ) );
+        $activeLock->lastAccess = $lastAccess;
+
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             array( $result ),
             'requests',
             $reqGen

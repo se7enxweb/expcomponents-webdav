@@ -44,7 +44,7 @@ class ezcWebdavBasicPathFactoryTest extends ezcTestCase
 {
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( 'ezcWebdavBasicPathFactoryTest' );
+		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavBasicPathFactoryTest' );
 	}
 
     public function testPathDispatchingWithoutBasePath()

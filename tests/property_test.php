@@ -93,7 +93,7 @@ abstract class ezcWebdavPropertyTestCase extends ezcTestCase
 
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( 'ezcWebdavPropertyTestCase' );
+		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavPropertyTestCase' );
 	}
 
     /**
@@ -143,11 +143,8 @@ abstract class ezcWebdavPropertyTestCase extends ezcTestCase
     public function testGetAccessFailure()
     {
         $object = $this->getObject();
-        try
-        {
-            echo $object->fooBarBaz;
-        }
-        catch ( ezcBasePropertyNotFoundException $e ) {}
+        $this->expectException( 'ezcBasePropertyNotFoundException' );
+        echo $object->fooBarBaz;
     }
 
     public function testSetAccessSuccess()

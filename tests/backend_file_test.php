@@ -45,7 +45,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
 
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( 'ezcWebdavFileBackendTest' );
+		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavFileBackendTest' );
 	}
 
     protected function recursiveTouch( $source, $time )
@@ -175,7 +175,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
         );
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -189,14 +189,14 @@ class ezcWebdavFileBackendTest extends ezcTestCase
         );
 
         // Remove SVN directories from temporary backend
-        $svnDirs = ezcFile::findRecursive(
+        $svnDirs = ezcBaseFile::findRecursive(
             $this->tempDir . 'backend/',
             array( '(/\.svn/entries$)' )
         );
 
         foreach ( $svnDirs as $dir )
         {
-            ezcFile::removeRecursive( dirname( $dir ) );
+            ezcBaseFile::removeRecursive( dirname( $dir ) );
         }
 
         // Explicitely set mtime and ctime
@@ -211,7 +211,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
         date_default_timezone_set( 'UTC' );
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         // Reset old timezone
         date_default_timezone_set( $this->oldTimezone );
@@ -2518,7 +2518,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
             'Lock file not created'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             1,
             'lockLevel',
             $backend,
@@ -2527,12 +2527,12 @@ class ezcWebdavFileBackendTest extends ezcTestCase
 
         $backend->unlock();
 
-        $this->assertFileNotExists(
+        $this->assertFileDoesNotExist(
             $backendDir . $backend->options->lockFileName,
             'Lock file not removed.'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             0,
             'lockLevel',
             $backend,
@@ -2633,7 +2633,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
             'Lock file not created'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             1,
             'lockLevel',
             $backend,
@@ -2646,12 +2646,12 @@ class ezcWebdavFileBackendTest extends ezcTestCase
 
         $backend->unlock();
 
-        $this->assertFileNotExists(
+        $this->assertFileDoesNotExist(
             $backendDir . $backend->options->lockFileName,
             'Lock file not removed.'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             0,
             'lockLevel',
             $backend,
@@ -2671,7 +2671,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
             'Lock file not created'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             1,
             'lockLevel',
             $backend,
@@ -2685,7 +2685,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
             'Lock file not created'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             2,
             'lockLevel',
             $backend,
@@ -2699,7 +2699,7 @@ class ezcWebdavFileBackendTest extends ezcTestCase
             'Lock file not created'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             1,
             'lockLevel',
             $backend,
@@ -2708,12 +2708,12 @@ class ezcWebdavFileBackendTest extends ezcTestCase
 
         $backend->unlock();
 
-        $this->assertFileNotExists(
+        $this->assertFileDoesNotExist(
             $backendDir . $backend->options->lockFileName,
             'Lock file not removed.'
         );
 
-        $this->assertAttributeEquals(
+        ezcWebdavTestAttributeAssert::assertAttributeEquals(
             0,
             'lockLevel',
             $backend,

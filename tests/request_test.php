@@ -48,7 +48,7 @@ abstract class ezcWebdavRequestTestCase extends ezcWebdavPropertyTestCase
 
 	public static function suite()
 	{
-		return new PHPUnit_Framework_TestSuite( 'ezcWebdavRequestTestCase' );
+		return new \PHPUnit\Framework\TestSuite( 'ezcWebdavRequestTestCase' );
 	}
 
     /**

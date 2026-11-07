@@ -38,8 +38,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => 'Authorization failed.
-',
+      'body' => 'Authorization failed.',
       'headers' => 
       array (
         'WWW-Authenticate' => 
@@ -94,8 +93,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => 'Authorization failed.
-',
+      'body' => 'Authorization failed.',
       'headers' => 
       array (
         'WWW-Authenticate' => 
@@ -148,8 +146,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => 'Authorization failed.
-',
+      'body' => 'Authorization failed.',
       'headers' => 
       array (
         'WWW-Authenticate' => 
@@ -202,8 +199,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => 'Authorization failed.
-',
+      'body' => 'Authorization failed.',
       'headers' => 
       array (
         'WWW-Authenticate' => 
@@ -259,8 +255,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'DAV' => '1, 2',
@@ -529,8 +524,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => 'Some text content.
-',
+      'body' => 'Some text content.',
       'headers' => 
       array (
         'ETag' => '60c0afeb8f68b1765e13694b5e7c8c3d',
@@ -743,8 +737,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -798,7 +791,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/Neuer%20Ordner</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getetag>f38841b34043d061f2da79f3346a62ed</lp1:getetag><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/Neuer%20Ordner</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getetag>f38841b34043d061f2da79f3346a62ed</lp1:getetag><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -910,8 +903,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -989,7 +981,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>newdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -1045,8 +1037,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => 'd7d5492acf7f2f11647278924f7586ba',
@@ -1125,7 +1116,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/file.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>newdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/file.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -1179,8 +1170,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -1234,7 +1224,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/Neuer%20Ordner</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getetag>768743f5d63bb410591027aa63ed208f</lp1:getetag><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/Neuer%20Ordner</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getetag>768743f5d63bb410591027aa63ed208f</lp1:getetag><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -1290,7 +1280,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getetag>f38841b34043d061f2da79f3346a62ed</lp1:getetag><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>newdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getetag>8887bec8c9eca1eafc8f299e0765984f</lp1:getetag><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -1346,8 +1336,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -1425,7 +1414,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/newsubdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/newsubdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>newsubdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -1481,8 +1470,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => '3c9be7330d80dfd9acee27eb9017f47c',
@@ -1593,8 +1581,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => '3c9be7330d80dfd9acee27eb9017f47c',
@@ -1673,7 +1660,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/file.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/newsubdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>newdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/file.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir/newsubdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>newsubdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -1753,7 +1740,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>subdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/file.html</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.html</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>text/html; charset="utf-8"</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>39</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/file.xml</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.xml</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>text/xml; charset="utf-8"</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>18</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>Neuer%20Ordner</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>subdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/file.html</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.html</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>text/html; charset="utf-8"</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>39</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/file.xml</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.xml</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>text/xml; charset="utf-8"</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>18</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir/newdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>newdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -1864,8 +1851,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -1917,8 +1903,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<html><body><h1>Test</h1></body></html>
-',
+      'body' => '<html><body><h1>Test</h1></body></html>',
       'headers' => 
       array (
         'ETag' => '3b191a38c8e5d686506677906f3a4cfd',
@@ -1971,8 +1956,8 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '<?xml?><content/>
-',
+      'body' => '<?xml?>
+<content/>',
       'headers' => 
       array (
         'ETag' => '8cc4e8038561985cf9e68ee3e36f8882',
@@ -2082,8 +2067,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -2136,8 +2120,7 @@ return array (
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -2592,8 +2575,7 @@ vim: et syn=rst tw=79 --></div></div></body></html>
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => '42fa6b3c46b3066e7ce125d5c114877b',
@@ -2667,8 +2649,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => '03f21d9964e17d45d71164e30d8bbab5',
@@ -2722,8 +2703,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => '63511f3c7958e471295a003b75f74a28',
@@ -2777,8 +2757,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => '5f7107cf6bdf69d5124b818950a06da6',
@@ -2832,8 +2811,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => 'd5a7e9654ccce239027923f1a05ccf2b',
@@ -2944,8 +2922,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -3055,8 +3032,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -3166,8 +3142,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -3620,7 +3595,6 @@ fill-column: 79
 End:
 vim: et syn=rst tw=79 --></div></div></body></html>
 
-
 ',
       'headers' => 
       array (
@@ -3693,7 +3667,6 @@ Mathematical characters
 ‚à¨ ‚à≠ = ‚âî ‚âï ‚âô ‚âù ‚â† ‚â° ‚â¢ < > ‚â§ ‚â• ‚â™ ‚â´ ‚âÆ ‚âØ ‚â∞ ‚â± ‚â∫ ‚âª ‚âº ‚âΩ ‚äÄ ‚äÅ ‚äÇ ‚äÉ ‚äÑ ‚äÖ ‚äÜ ‚äá ‚äà ‚äâ ‚äï ‚äñ ‚äó ‚äô ‚äö
 ‚äõ ‚äú ‚äù ‚ä¢ ‚ä£ ‚ä§ ‚ä• ‚äß ‚ä¨ ‚ä∂ ‚ä∑ ‚äª ‚äº ‚äΩ ‚Ä∞ ‚Ä± 
 
-
 ',
       'headers' => 
       array (
@@ -3747,8 +3720,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => 'Some non-UTF8 content.
-',
+      'body' => 'Some non-UTF8 content.',
       'headers' => 
       array (
         'ETag' => '63511f3c7958e471295a003b75f74a28',
@@ -3800,8 +3772,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => 'Some non-UTF8 content.
-',
+      'body' => 'Some non-UTF8 content.',
       'headers' => 
       array (
         'ETag' => '5207854b89087a4f4eca1b85808128d6',
@@ -3854,8 +3825,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => 'Some ‰ˆ¸ﬂ UTF-8 content.
-',
+      'body' => 'Some ‰ˆ¸ﬂ UTF-8 content.',
       'headers' => 
       array (
         'ETag' => 'd5a7e9654ccce239027923f1a05ccf2b',
@@ -3908,8 +3878,7 @@ Mathematical characters
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -4135,8 +4104,7 @@ vim: et syn=rst tw=79</comment></section></document>
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => '91f0d1c75dbbaf2736b997fbf1dfc2fb',
@@ -4232,8 +4200,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'ETag' => 'a7396b05849c2e5818d9af2c90beb699',
@@ -4425,8 +4392,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -4481,8 +4447,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -4537,8 +4502,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -4593,8 +4557,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -4649,8 +4612,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -4705,8 +4667,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -4816,8 +4777,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -4895,7 +4855,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>collection</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/file.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>text/plain; charset="utf-8"</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>18</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>subdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/put_test_renamed.html</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>put_test.html</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/put_test_%F6%E4%FC%DF.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>put_test_utf8_content.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/some%20nice%20non-utf8%20file.txt.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>some%20nice%20non-utf8%20file.txt.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/some_non_utf8.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>some%20%E4%F6%FC%DF%20utf-8%20file.txt.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/some%20unnice%20non-utf8%20file.txt.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>some%20unnice%20non-utf8%20file.txt.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>0</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/collection_renamed</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>collection</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
+      'body' => '<?xml version="1.0" encoding="UTF-8"?><D:multistatus xmlns:D="DAV:"><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>collection</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/file.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>file.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>text/plain; charset="utf-8"</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>18</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/subdir</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>subdir</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/put_test_renamed.html</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>put_test_renamed.html</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>18675</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/put_test_%F6%E4%FC%DF.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>put_test_ˆ‰¸ﬂ.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>740</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/some%20nice%20non-utf8%20file.txt.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>some nice non-utf8 file.txt.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>22</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/some_non_utf8.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>some_non_utf8.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>22</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/some%20unnice%20non-utf8%20file.txt.txt</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>some unnice non-utf8 file.txt.txt</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>application/octet-stream</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>24</D:getcontentlength><lp1:resourcetype/></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response><D:response xmlns:lp1="DAV:" xmlns:lp2="http://apache.org/dav/props/" xmlns:ns0="urn:uuid:c2f41010-65b3-11d1-a29f-00aa00c14882/"><D:href>http://webdav/collection/collection_renamed</D:href><D:propstat><D:prop><lp1:creationdate ns0:dt="dateTime.tz">2003-05-27T11:27:00+0000</lp1:creationdate><D:displayname>collection_renamed</D:displayname><D:getcontentlanguage>en</D:getcontentlanguage><D:getcontenttype>httpd/unix-directory</D:getcontenttype><lp1:getlastmodified ns0:dt="dateTime.rfc1123">Mon, 15 Aug 2005 15:13:00 +0000</lp1:getlastmodified><D:getcontentlength>4096</D:getcontentlength><lp1:resourcetype><D:collection/></lp1:resourcetype></D:prop><D:status>HTTP/1.1 200 OK</D:status></D:propstat><D:propstat><D:prop><D:name/><D:parentname/><D:href/><D:ishidden/><D:iscollection/><D:isreadonly/><D:contentclass/><D:lastaccessed/><D:isstructureddocument/><D:defaultdocument/><D:isroot/></D:prop><D:status>HTTP/1.1 404 Not Found</D:status></D:propstat></D:response></D:multistatus>
 
 ',
       'headers' => 
@@ -5008,8 +4968,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -5119,8 +5078,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',
@@ -5229,8 +5187,7 @@ xπ#œ' . "\0" . 'ôÙ{J9qhÀ√õ®Â[°ÛÑBK†q°íà&˚óL.~,«ä}‡∂±;Q£sl˜≈MºÜNóÜ∂,v=Z√
     ),
     'response' => 
     array (
-      'body' => '
-',
+      'body' => '',
       'headers' => 
       array (
         'Server' => 'lighttpd/1.4.19/eZComponents/dev/ezcWebdavMicrosoftCompatibleTransportMock',

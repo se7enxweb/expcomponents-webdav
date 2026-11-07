@@ -3511,9 +3511,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>3f3e5419aff5da5a5f9ef38c571ec272</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -3642,9 +3642,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>3f3e5419aff5da5a5f9ef38c571ec272</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -3804,9 +3804,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>3f3e5419aff5da5a5f9ef38c571ec272</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -3823,9 +3823,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>88f535dffe3f6075a0a7461f40325aea</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -3935,9 +3935,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>3f3e5419aff5da5a5f9ef38c571ec272</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -3954,9 +3954,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>88f535dffe3f6075a0a7461f40325aea</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -4097,9 +4097,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>3f3e5419aff5da5a5f9ef38c571ec272</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -4116,9 +4116,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>88f535dffe3f6075a0a7461f40325aea</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -4135,9 +4135,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>03f21d9964e17d45d71164e30d8bbab5</D:getetag>
+        <D:getetag>a22ba5f3f6bfe26a62130a37fa15133d</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -4648,9 +4648,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>3f3e5419aff5da5a5f9ef38c571ec272</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -4667,9 +4667,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>88f535dffe3f6075a0a7461f40325aea</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -4686,9 +4686,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>03f21d9964e17d45d71164e30d8bbab5</D:getetag>
+        <D:getetag>a22ba5f3f6bfe26a62130a37fa15133d</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -5867,9 +5867,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>3f3e5419aff5da5a5f9ef38c571ec272</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -5886,9 +5886,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>88f535dffe3f6075a0a7461f40325aea</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -5905,9 +5905,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>03f21d9964e17d45d71164e30d8bbab5</D:getetag>
+        <D:getetag>a22ba5f3f6bfe26a62130a37fa15133d</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6133,9 +6133,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>3f3e5419aff5da5a5f9ef38c571ec272</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6152,9 +6152,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>88f535dffe3f6075a0a7461f40325aea</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6171,9 +6171,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>03f21d9964e17d45d71164e30d8bbab5</D:getetag>
+        <D:getetag>a22ba5f3f6bfe26a62130a37fa15133d</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6589,9 +6589,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>90793eca19e036301853f9c45343229d</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6608,9 +6608,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>179f9baa08daec4f0936fdd8d6f42175</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6627,9 +6627,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>03f21d9964e17d45d71164e30d8bbab5</D:getetag>
+        <D:getetag>5b3d0c9655c1968709225b5c3f5999c5</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6760,9 +6760,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>90793eca19e036301853f9c45343229d</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6779,9 +6779,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>179f9baa08daec4f0936fdd8d6f42175</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6798,9 +6798,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>03f21d9964e17d45d71164e30d8bbab5</D:getetag>
+        <D:getetag>5b3d0c9655c1968709225b5c3f5999c5</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6960,9 +6960,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>d2a20cb330bba15d6ead72369a42fa83</D:getetag>
+        <D:getetag>90793eca19e036301853f9c45343229d</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6979,9 +6979,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>42fa6b3c46b3066e7ce125d5c114877b</D:getetag>
+        <D:getetag>179f9baa08daec4f0936fdd8d6f42175</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -6998,9 +6998,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>03f21d9964e17d45d71164e30d8bbab5</D:getetag>
+        <D:getetag>5b3d0c9655c1968709225b5c3f5999c5</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -7017,7 +7017,7 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>httpd/unix-directory</D:getcontenttype>
-        <D:getetag>2215ad4a0621fe1f07727e8534c54a95</D:getetag>
+        <D:getetag>23afbf77c7939f68b31aa891b80e1b80</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
         <D:getcontentlength>4096</D:getcontentlength>
         <D:resourcetype>
@@ -10638,9 +10638,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>502bbb712c359f4a1c4699d4b5c9ff27</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -10771,9 +10771,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>502bbb712c359f4a1c4699d4b5c9ff27</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -10937,9 +10937,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>502bbb712c359f4a1c4699d4b5c9ff27</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -10956,9 +10956,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>cf5657d4ea808c2f8b300e5b148df562</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -11070,9 +11070,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>502bbb712c359f4a1c4699d4b5c9ff27</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -11089,9 +11089,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>cf5657d4ea808c2f8b300e5b148df562</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -11236,9 +11236,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>502bbb712c359f4a1c4699d4b5c9ff27</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -11255,9 +11255,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>cf5657d4ea808c2f8b300e5b148df562</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -11274,9 +11274,9 @@ Mathematical characters
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>94ad488564aca44123a62c6f22c090dd</D:getetag>
+        <D:getetag>22789e94da0ed3d0c1d084816e366220</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -11797,9 +11797,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>502bbb712c359f4a1c4699d4b5c9ff27</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -11816,9 +11816,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>cf5657d4ea808c2f8b300e5b148df562</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -11835,9 +11835,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>94ad488564aca44123a62c6f22c090dd</D:getetag>
+        <D:getetag>22789e94da0ed3d0c1d084816e366220</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13081,9 +13081,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>502bbb712c359f4a1c4699d4b5c9ff27</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13100,9 +13100,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>cf5657d4ea808c2f8b300e5b148df562</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13119,9 +13119,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>94ad488564aca44123a62c6f22c090dd</D:getetag>
+        <D:getetag>22789e94da0ed3d0c1d084816e366220</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13467,9 +13467,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>502bbb712c359f4a1c4699d4b5c9ff27</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13486,9 +13486,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>cf5657d4ea808c2f8b300e5b148df562</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13505,9 +13505,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>94ad488564aca44123a62c6f22c090dd</D:getetag>
+        <D:getetag>22789e94da0ed3d0c1d084816e366220</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13933,9 +13933,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>76d10dcb28faf16c21889b0ca35af344</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13952,9 +13952,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>1839d9ae5899689fa9822c4c6da7f698</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -13971,9 +13971,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>94ad488564aca44123a62c6f22c090dd</D:getetag>
+        <D:getetag>13611068a7ac56cb9117b140d12db864</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -14106,9 +14106,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>76d10dcb28faf16c21889b0ca35af344</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -14125,9 +14125,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>1839d9ae5899689fa9822c4c6da7f698</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -14144,9 +14144,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>94ad488564aca44123a62c6f22c090dd</D:getetag>
+        <D:getetag>13611068a7ac56cb9117b140d12db864</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -14310,9 +14310,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>29909daed84fd350d162e0d7b9b76483</D:getetag>
+        <D:getetag>76d10dcb28faf16c21889b0ca35af344</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -14329,9 +14329,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>866d436fdb9577521a1d1acd440e1026</D:getetag>
+        <D:getetag>1839d9ae5899689fa9822c4c6da7f698</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>18675</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -14348,9 +14348,9 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>application/octet-stream</D:getcontenttype>
-        <D:getetag>94ad488564aca44123a62c6f22c090dd</D:getetag>
+        <D:getetag>13611068a7ac56cb9117b140d12db864</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
-        <D:getcontentlength>0</D:getcontentlength>
+        <D:getcontentlength>740</D:getcontentlength>
         <D:resourcetype/>
       </D:prop>
       <D:status>HTTP/1.1 200 OK</D:status>
@@ -14367,7 +14367,7 @@ x¹#Ï' . "\0" . '™ô{J9qhËÃ›¨å[¡ó„BK q¡’ˆ&û—L.~,ÇŠ}à¶±;Q£sl÷ÅM¼†N—†¶,v=ZÃ
     <D:propstat>
       <D:prop>
         <D:getcontenttype>httpd/unix-directory</D:getcontenttype>
-        <D:getetag>c5478175e232c6c35b72e28fb638de42</D:getetag>
+        <D:getetag>fa87f05f3ae2dd9b9b1139818c54e208</D:getetag>
         <D:getlastmodified>Mon, 15 Aug 2005 15:13:00 +0000</D:getlastmodified>
         <D:getcontentlength>4096</D:getcontentlength>
         <D:resourcetype>

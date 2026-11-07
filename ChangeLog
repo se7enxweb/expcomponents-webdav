@@ -19,6 +19,11 @@ Unreleased - se7enxweb/expcomponents-webdav
   multistatus response).
 - Fixed: The memory backend's forced copy errors created their error
   responses without "new", a fatal error.
+- Fixed: A dead property whose prefix is bound to no namespace
+  (xmlns:p="", which XML namespaces do not allow) was written back as
+  <p:name/> without a declaration with libxml 2.9, which is not
+  namespace-well-formed. Such a property is stored and written without the
+  prefix, as older libxml versions did.
 
 
 1.2.2 - Sunday 1 November 2026

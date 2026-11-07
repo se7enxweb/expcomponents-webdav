@@ -244,11 +244,34 @@ class ezcWebdavPropertyHandler
         $copiedNode = $propDom->importNode( $domElement, true );
         $propDom->appendChild( $copiedNode );
         
+        $name = $domElement->localName;
+        if ( (string) $domElement->namespaceURI === '' )
+        {
+            // see serializeDeadProperty(): "p:foo" with p bound to no namespace
+            $name = self::withoutUnboundPrefix( $name );
+        }
+
         return new ezcWebdavDeadProperty(
             (string) $domElement->namespaceURI,
-            $domElement->localName,
+            $name,
             $propDom->saveXML()
         );
+    }
+
+    /**
+     * Returns $name without a "prefix:" that is bound to no namespace.
+     *
+     * Only for the name of an element that has no namespace: libxml 2.9 keeps
+     * such a prefix (from xmlns:p="", which XML namespaces do not allow) as
+     * part of the local name.
+     *
+     * @param string $name
+     * @return string
+     */
+    protected static function withoutUnboundPrefix( $name )
+    {
+        $colon = strrpos( $name, ':' );
+        return $colon === false ? $name : substr( $name, $colon + 1 );
     }
 
     /**
@@ -465,7 +488,27 @@ class ezcWebdavPropertyHandler
         }
 
         $contentDom = $this->getXmlTool()->createDom( $property->content );
-        return  $parentElement->ownerDocument->importNode( $contentDom->documentElement, true );
+        $element    = $parentElement->ownerDocument->importNode( $contentDom->documentElement, true );
+
+        // A prefix bound to no namespace (xmlns:p="", which XML namespaces
+        // do not allow): libxml 2.9 drops the declaration and keeps "p:foo"
+        // as the name of an element without namespace, which written back is
+        // not namespace-well-formed. The element has no namespace, so it is
+        // written without the prefix.
+        if ( (string) $element->namespaceURI === '' && strpos( $element->nodeName, ':' ) !== false )
+        {
+            $plain = $parentElement->ownerDocument->createElement( self::withoutUnboundPrefix( $element->nodeName ) );
+            foreach ( iterator_to_array( $element->attributes ) as $attribute )
+            {
+                $plain->setAttributeNodeNS( $attribute->cloneNode( true ) );
+            }
+            while ( $element->firstChild !== null )
+            {
+                $plain->appendChild( $element->firstChild );
+            }
+            $element = $plain;
+        }
+        return $element;
     }
 
     /**

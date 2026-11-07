@@ -73,6 +73,46 @@ class ezcWebdavDateTime extends DateTime
     {
         $this->__construct( $this->backupTime );
     }
+
+    /**
+     * Serializes the date in the same form as __sleep() (PHP 7.4 and later
+     * use this method instead of __sleep()).
+     *
+     * @return array
+     */
+    public function __serialize(): array
+    {
+        return array( 'backupTime' => $this->format( 'r' ) );
+    }
+
+    /**
+     * Restores the date from what __serialize(), __sleep() or
+     * DateTime::__serialize() wrote.
+     *
+     * Since PHP 8.2 DateTime has its own __unserialize(), which PHP calls
+     * instead of __wakeup() and which cannot read the "backupTime" data of
+     * earlier versions; this method reads all of them.
+     *
+     * @param array $data
+     * @return void
+     */
+    public function __unserialize( array $data ): void
+    {
+        foreach ( array( 'backupTime', "\0ezcWebdavDateTime\0backupTime" ) as $key )
+        {
+            if ( isset( $data[$key] ) )
+            {
+                $this->__construct( $data[$key] );
+                return;
+            }
+        }
+        if ( isset( $data['date'], $data['timezone'] ) )
+        {
+            $this->__construct( $data['date'], new DateTimeZone( $data['timezone'] ) );
+            return;
+        }
+        throw new UnexpectedValueException( 'Invalid serialization data for ezcWebdavDateTime object' );
+    }
 }
 
 ?>

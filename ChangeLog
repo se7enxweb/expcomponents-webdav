@@ -24,6 +24,14 @@ Unreleased - se7enxweb/expcomponents-webdav
   <p:name/> without a declaration with libxml 2.9, which is not
   namespace-well-formed. Such a property is stored and written without the
   prefix, as older libxml versions did.
+- Fixed: On PHP 8.2 and later, an ezcWebdavDateTime serialized by an earlier
+  PHP version could not be unserialized ("Invalid serialization data for
+  DateTime object"): DateTime::__unserialize() replaced the class's
+  __wakeup(). The class has its own __serialize() and __unserialize(), which
+  keep its format and read every earlier one.
+- Fixed: PHP 8.5 wrote the XML declaration as encoding="utf-8", earlier
+  versions as encoding="UTF-8". The XML tool names the encoding UTF-8, so
+  every PHP version writes the same responses.
 - Updated: The tests run on PHPUnit 9 (PHP 7.4 to 8.5).
 
 

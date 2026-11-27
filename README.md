@@ -2,7 +2,7 @@
 
 This component allows you to set up and run your own WebDAV (RFC 2518) server, to enable online content editing for the users of your system through the WebDAV HTTP extension.
 
-This is the Exponential fork of [zetacomponents/Webdav](https://github.com/zetacomponents/Webdav),
+This is the Exponential Components fork of [zetacomponents/Webdav](https://github.com/zetacomponents/Webdav),
 maintained by 7x (se7en.x) and the Exponential Foundation for Exponential and anyone else
 who uses the Zeta Components Webdav component on current PHP versions. All credit for the
 component goes to the Zeta Components authors listed in `composer.json` and `CREDITS`;
